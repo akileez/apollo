@@ -1,0 +1,16 @@
+{
+  # Development variables
+  verbose: false
+  helium: false
+  htmlInspector: false
+  styleguide: true
+  holder: true
+  viewport: true
+
+  # Production variables
+  jQueryCDN: false
+
+  # Anchor links in headings
+  automatic_anchors_in_headings: false
+  automatic_anchors_for_toc: false
+}
