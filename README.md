@@ -46,3 +46,11 @@ App Level:
 	    └── less
 	
 	21 directories
+
+## Requirements
+
+node, shelljs
+
+## Settings
+
+Change options.cson to suit your particular environment.
