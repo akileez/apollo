@@ -1,11 +1,11 @@
 {
-  "name": "abcde",
+  "name": "apollo",
   "version": "0.0.1",
   "description": "Assemble Bootstrap Crafted Development Environment Featuring Grunt Handlebars Including Javascript",
-  "homepage": "http://akileez.github.io/abcde",
+  "homepage": "http://akileez.github.io/apollo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akileez/abcde.git"
+    "url": "https://github.com/akileez/apollo.git"
   },
   "keywords": [
     "assemble",
