@@ -22,3 +22,4 @@ Replaced grunt tasks which are run on the command line via grunt-shell
 * grunt-htmlinspector (node htmlinspector)  
 * grunt-compress (gzip)  
 * grunt-rename (mv)  
+* grunt-csscomb (node csscomb)
