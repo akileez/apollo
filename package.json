@@ -86,7 +86,6 @@
     "grunt-timer": "~0.3.0",
     "load-grunt-tasks": "~0.3.0",
     "assemble": "~0.4.35",
-    "assemble-contrib-permalinks": "~0.3.3",
-    "handlebars-helper-compose": "~0.2.11"
+    "assemble-contrib-permalinks": "~0.3.3"
   }
 }
