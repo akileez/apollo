@@ -54,3 +54,12 @@ node, shelljs
 ## Settings
 
 Change options.cson to suit your particular environment.
+
+## Command Line Replacements
+Replaced grunt tasks which are run via the command line via grunt-shell  
+* grunt-sync (rsync)  
+* grunt-rsync (rsync)  
+* grunt-eslint (node eslint)  
+* grunt-htmlinspector (node htmlinspector)  
+* grunt-compress (gzip)  
+* grunt-rename (mv)  
