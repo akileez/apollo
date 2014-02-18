@@ -1,0 +1,34 @@
+{
+  # social/sharing
+  meta:
+    facebook: false
+    twitter:
+        summary    : false
+        summary_lg : false
+        photo      : false
+        gallery    : false
+
+  facebook:
+    type        : "website"
+    site_name   : "<%= site.title %>"
+    description : "<%= site.description %>"
+    url         : "<%= site.domain %>"
+    image       : "<%= site.image %>"
+    email       : "<%= site.email %>"
+    phone       : "<%= site.phone %>"
+
+  twitter:
+    twitter_site    : ""
+    twitter_creator : ""
+    title           : "<%= site.title %>"
+    description     : "<%= site.description %>"
+    image           : ""
+
+  links:
+    facebook : ""
+    twitter  : ""
+    linkedin : ""
+    blogger  : ""
+    skype    : ""
+    youtube  : ""
+}
