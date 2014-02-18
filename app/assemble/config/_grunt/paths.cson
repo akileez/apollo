@@ -1,0 +1,75 @@
+{
+  # Directory Routing Assistance --------------------------------------------------
+  root       : '.'
+  app        : 'app'
+  # Build directories
+  build      : 'build/dev'
+  dist       : 'build/dist'
+  stage      : 'build/stage'
+  # Root level filesystem
+  bower      : 'packs'
+  tmp        : 'temp'
+  proj       : 'temp'
+  grunt      : 'grunt'
+  test       : 'test'
+  node       : 'node_modules'
+  # Application filesystem
+  assemble   : '<%= dir.app %>/assemble'
+  static     : '<%= dir.app %>/assets'
+  scripts    : '<%= dir.app %>/scripts'
+  styles     : '<%= dir.app %>/styles'
+  # Application processing
+  coffee     : '<%= dir.scripts %>/coffee'
+  js         : '<%= dir.scripts %>/js'
+  jsdev      : '<%= dir.js %>/development'
+  jsprod     : '<%= dir.js %>/_prod'
+  jquery     : '<%= dir.js %>/jquery'
+  jsviews    : '<%= dir.js %>/views'
+  jsvendor   : '<%= dir.jsviews %>/vendor'
+  jsboot     : '<%= dir.jquery %>/bootstrap'
+  jsplugins  : '<%= dir.jquery %>/plugins'
+  css        : '<%= dir.styles %>/css'
+  less       : '<%= dir.styles %>/less'
+  font       : '<%= dir.static %>/fonts'
+  img        : '<%= dir.static %>/img'
+  pdf        : '<%= dir.static %>/pdf'
+  data       : '<%= dir.static %>/data'
+  favicon    : '<%= dir.static %>/ico'
+  php        : '<%= dir.static %>/php'
+  # Configuration Files
+  config     : '<%= dir.assemble %>/config'
+  json       : '<%= dir.assemble %>/data'
+  cson       : '<%= dir.config %>'
+  yaml       : '<%= dir.config %>'
+  # Assemble Options
+  # folder name changes for listings
+  # componenet --> includes
+  # modules    --> plugins
+  # layouts    --> _layouts
+  # sections   --> _sections
+  assets     : '<%= dir.build %>/assets'
+  helpers    : '<%= dir.assemble %>/helpers'
+  modules    : '<%= dir.assemble %>/plugins'
+  partials   : '<%= dir.assemble %>/partials'
+  templates  : '<%= dir.assemble %>/templates'
+  layouts    : '<%= dir.partials %>/_layouts'
+  sections   : '<%= dir.partials %>/_sections'
+  components : '<%= dir.partials %>/includes'
+  bricks     : '<%= dir.components %>/bricks'
+  blocks     : '<%= dir.components %>/blocks'
+  cubes      : '<%= dir.components %>/cubes'
+  # Assemble Core Files
+  markdown   : '<%= dir.modules %>/content/markdown'
+  blog       : '<%= dir.templates %>/blog'
+  error      : '<%= dir.templates %>/error'
+  styleguide : '<%= dir.templates %>/styleguide'
+  site       : '<%= dir.templates %>/site'
+  sitemap    : '<%= dir.templates %>/sitemap'
+  views      : '<%= dir.templates %>/views'
+  articles   : '<%= dir.views %>/articles'
+  docs       : '<%= dir.views %>/docs'
+  # Misc
+  readme     : '<%= dir.tmp %>/readme'
+
+
+}
