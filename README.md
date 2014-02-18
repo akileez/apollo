@@ -5,47 +5,6 @@ Assemble Bootstrap crafted development environment featuring Grunt &amp; Handleb
 
 This is a work in progress as I move my working environment from dev machine to public github. Need to generalize files.
 
-Directory structure
-
-Top Level:
- 
-	 .
-	├── app
-	├── build
-	├── grunt
-	├── node_modules
-	├── packs
-	├── temp
-	└── test
-	
-	7 directories
-
-App Level:
-
-	.
-	├── assemble
-	│   ├── config
-	│   ├── data
-	│   ├── helpers
-	│   ├── partials
-	│   ├── plugins
-	│   └── templates
-	├── assets
-	│   ├── data
-	│   ├── fonts
-	│   ├── ico
-	│   ├── img
-	│   ├── pdf
-	│   └── php
-	├── scripts
-	│   ├── coffee
-	│   └── js
-	└── styles
-	    ├── config
-	    ├── css
-	    └── less
-	
-	21 directories
 
 ## Requirements
 
