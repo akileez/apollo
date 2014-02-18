@@ -1,0 +1,131 @@
+{
+  count: 1
+  units: "sentences"
+  sentenceLowerBound: 5
+  sentenceUpperBound: 15
+  paragraphLowerBound: 1
+  paragraphUpperBound: 1
+  format: "plain"
+
+  words:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 1
+    sentenceUpperBound: 4
+    paragraphLowerBound: 1
+    paragraphUpperBound: 1
+    format: "plain"
+
+  paragraph:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 10
+    sentenceUpperBound: 20
+    format: "plain"
+
+  paragraphs:
+    count: 3
+    units: "paragraphs"
+    sentenceLowerBound: 10
+    sentenceUpperBound: 20
+    format: "plain"
+
+  w0:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 1
+    sentenceUpperBound: 4
+    paragraphLowerBound: 1
+    paragraphUpperBound: 1
+    format: "html"
+  w1:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 1
+    sentenceUpperBound: 1
+    paragraphLowerBound: 1
+    paragraphUpperBound: 1
+    format: "html"
+  w2:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 2
+    sentenceUpperBound: 2
+    paragraphLowerBound: 1
+    paragraphUpperBound: 1
+    format: "html"
+  w3:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 3
+    sentenceUpperBound: 3
+    paragraphLowerBound: 1
+    paragraphUpperBound: 1
+    format: "html"
+  w4:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 4
+    sentenceUpperBound: 4
+    paragraphLowerBound: 1
+    paragraphUpperBound: 1
+    format: "html"
+
+  s0:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 5
+    sentenceUpperBound: 15
+    paragraphLowerBound: 1
+    paragraphUpperBound: 1
+    format: "html"
+  s1:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 10
+    sentenceUpperBound: 20
+    paragraphLowerBound: 1
+    paragraphUpperBound: 1
+    format: "html"
+  s2:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 10
+    sentenceUpperBound: 20
+    paragraphLowerBound: 2
+    paragraphUpperBound: 2
+    format: "html"
+  s3:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 10
+    sentenceUpperBound: 15
+    paragraphLowerBound: 3
+    paragraphUpperBound: 3
+    format: "html"
+
+  p1:
+    count: 1
+    units: "paragraphs"
+    sentenceLowerBound: 7
+    sentenceUpperBound: 12
+    paragraphLowerBound: 5
+    paragraphUpperBound: 9
+    format: "html"
+  p2:
+    count: 2
+    units: "paragraphs"
+    sentenceLowerBound: 6
+    sentenceUpperBound: 13
+    paragraphLowerBound: 4
+    paragraphUpperBound: 8
+    format: "html"
+  p3:
+    count: 3
+    units: "paragraphs"
+    sentenceLowerBound: 10
+    sentenceUpperBound: 20
+    paragraphLowerBound: 3
+    paragraphUpperBound: 7
+    format: "html"
+}
