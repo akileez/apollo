@@ -1,0 +1,22 @@
+{
+  peeps: [
+    titles: 'Frontend Architect'
+    name: '<%= pkg.author.name %>'
+    twitter: '<%= pkg.author.twitter %>'
+    site: '<%= pkg.author.url %>'
+    github: '<%= pkg.author.github %>'
+  # ,
+  #   titles: 'Backend Developer'
+  #   name: 'John Smith'
+  #   site: 'http://example.com'
+  #   twitter: "@twitterexample"
+  ]
+  thanks: true
+  colo:
+    lang: 'English'
+    stand: 'HTML5, CSS3'
+    tech: 'Handlebars, LESS, Javascript'
+    comp: 'Bootstrap, jQuery, Modernizr'
+    soft: 'Sublime Text 3, Pixelmator, Sketch'
+    auto: 'Grunt, Assemble'
+}
