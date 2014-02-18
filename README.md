@@ -1,4 +1,4 @@
-abcde
+assemble-bootstrap development environment
 =====
 
 Assemble Bootstrap crafted development environment featuring Grunt &amp; Handlebars including Javascript. This is my custom static site development environment.
