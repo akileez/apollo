@@ -1,0 +1,20 @@
+{
+  # Project Settings -----------------------------------------
+  domain      : "domain"
+  url         : "http://www.domain.net"
+  author      : '<%= pkg.author.name %>'
+  name:
+    first : "FirstName"
+    last  : "LastName"
+  owner       : "First Last"
+  copyright   : "domain name"
+  title       : "domain title"
+  tagline     : "tagline here"
+  description : "domain description here"
+  email       : "email@domain.com"
+  emailSubject: "Subject heading for php email"
+  phone       : "16091234567"
+  image       : ""
+  language    : "en"
+  keywords: "keywords here"
+}
