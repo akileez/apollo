@@ -1,0 +1,23 @@
+---
+sectionTag: section
+modifier: "sub-section"
+identifier: false
+container: false
+---
+{{#jumbotron}}
+  {{#h1}}
+    {{pageHeader}} {{#process}}{{small pageHeaderDescriptor}}{{/process}}
+  {{/h1}}
+  {{#p class="lead"}}
+    {{#if pageSummary}}
+      {{#process}}{{{pageSummary}}}{{/process}}
+    {{else}}
+      {{description}}
+    {{/if}}
+  {{/p}}
+  {{space 40}}
+  {{composite module.viewport presentation='lg'}}
+  {{#button "btn" "primary align-right" id="btn-toggle-code"}}
+    {{icons fa.code}} Toggle code visibility
+  {{/button}}
+{{/jumbotron}}

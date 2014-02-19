@@ -1,0 +1,20 @@
+---
+sectionTag: section
+modifier: "sub-section"
+identifier: false
+container: false
+---
+{{#jumbotron}}
+  {{#h1}}{{pageHeader}} {{small pageHeaderDescriptor}}{{/h1}}
+  {{#if pageSummary}}
+    {{#p class="lead"}}
+      {{#process}}{{{pageSummary}}}{{/process}}
+    {{/p}}
+  {{else}}
+    {{#p class="lead"}}
+      Default text for the jumbotron component showing tooltips, popovers and viewport button. {{tooltip "Obcaecati" title="Hello World" }} nostrum officia sed eum aliquid {{popover 'facilis' trigger='hover' placement='bottom' title='Hello World' content='This is something very unusal for me to do.' class="btn btn-success"}}.
+    {{/p}}
+    {{composite module.viewport position="pull-right"}}
+    {{clearfix}}
+  {{/if}}
+{{/jumbotron}}

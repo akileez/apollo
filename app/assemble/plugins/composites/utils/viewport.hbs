@@ -1,0 +1,33 @@
+---
+presentation: "warning btn-lg"
+---
+{{#process}}
+{{#button "div" "{{ifThat position presentation}}"}}
+  {{#span}}{{icons fa.desktop "icons"}}{{/span}}
+  {{#span}}{{icons fa.tablet "icons"}}{{/span}}
+  {{#span}}{{icons fa.mobile "icons"}}{{/span}}
+  {{space 10}}
+  {{viewport "inverse label-raised"}}
+{{/button}}
+{{/process}}
+{{!--}}
+{{#is position}}
+  {{#process}}
+    {{#button "div" '{{presentation}} {{position}}'}}
+      {{#span}}{{icons fa.desktop "icons"}}{{/span}}
+      {{#span}}{{icons fa.tablet "icons"}}{{/span}}
+      {{#span}}{{icons fa.mobile "icons"}}{{/span}}
+      {{space 10}}
+      {{viewport "inverse label-raised"}}
+    {{/button}}
+  {{/process}}
+{{else}}
+  {{#button "div" presentation}}
+    {{#span}}{{icons fa.desktop "icons"}}{{/span}}
+    {{#span}}{{icons fa.tablet "icons"}}{{/span}}
+    {{#span}}{{icons fa.mobile "icons"}}{{/span}}
+    {{space 10}}
+    {{viewport "inverse label-raised"}}
+  {{/button}}
+{{/is}}
+--}}
