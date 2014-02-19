@@ -9,7 +9,7 @@ more infomation in the [wiki](https://github.com/akileez/apollo/wiki) until I ge
 
 My initial goals for this project:
 ---
-* develop a dev environment so as not to be dependent on any commerical product.
+* build an environment (psuedo application) so as not to be dependent on any commerical product.
 * automate the creation of sitemaps, navigation, forms, and tables. All things I hate doing by hand.
 * learn javascript
 * familarize myself with git
