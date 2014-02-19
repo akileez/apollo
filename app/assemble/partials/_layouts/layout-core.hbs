@@ -1,0 +1,13 @@
+---
+layout: layout-base
+---
+{{#if stickyFooter}}<div id="wrap">{{/if}}
+  <main>
+  {{#if container}}<div class="container">{{/if}}
+  {{#if containerAlt}}<div class="{{containerAlt}}">{{/if}}
+  {{> body}}
+  {{#if containerAlt}}</div>{{/if}}
+  {{#if container}}</div>{{/if}}
+  </main>
+{{#if stickyFooter}}</div>{{/if}}
+{{#if stickyFooter}}{{div id="push"}}{{/if}}
