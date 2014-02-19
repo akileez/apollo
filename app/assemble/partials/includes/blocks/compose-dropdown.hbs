@@ -1,0 +1,18 @@
+{{#arrange src}}
+  {{#div class="dropdown"}}
+    {{! Link or button to toggle dropdown}}
+    {{#not showMeOrNot}}
+      {{#button buttontype buttonclass data-toggle="dropdown"}}
+        {{buttonmessage}} {{span class="caret"}}
+      {{/button}}
+      {{#ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1"}}
+        {{{@content}}}
+      {{/ul}}
+    {{else}}
+      {{#ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style=showMeOrNotStyles}}
+        {{{@content}}}
+      {{/ul}}
+    {{/not}}
+  {{/div}}
+{{/arrange}}
+

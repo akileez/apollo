@@ -1,0 +1,19 @@
+{{#arrange src}}
+  {{#panel context}}
+    {{#if panel_heading}}
+    {{#panel 'head'}}
+      {{#if title}}
+        {{h3 title class="panel-title"}}
+      {{else}}
+        {{head}}
+      {{/if}}
+    {{/panel}}
+    {{/if}}
+    {{{@content}}}
+    {{#if panel_footer}}
+    {{#panel 'foot'}}
+      {{{panel_footer}}}
+    {{/panel}}
+    {{/if}}
+  {{/panel}}
+{{/arrange}}

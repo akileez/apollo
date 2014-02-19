@@ -1,0 +1,46 @@
+---
+# THIS IS A HACK!!! which will filter the posts based on the index of the file.
+# Use the {{partial}} helper instead of the {{include}} helper to filter YFM.
+# Note: using custom helpers: {{partial}} {{include}} {{posts}} {{is}} {{panel}} {{composite}}
+# USAGE: {{partial 'compose-blog' src='post*.hbs' range=true f0='gt' n0=0 f1='lt' n1=11}}
+format: false
+# range is essentially doing this: {{#is @index "gt" 1}} {{#is @index "lt" 4}}
+range: false
+# Possible filters: gt, lt, gte, lte, eq, not.
+filter: gt
+num: 0
+# default range values
+filter0: gt
+num0: 0
+filter1: lte
+num1: 10
+---
+{{#posts src}}
+  {{#is ../range}}
+    {{#is @index ../../filter0 ../../num0}}
+      {{#is @index ../../../filter1 ../../../num1}}
+        {{#is ../../../../format}}
+          {{#panel}}
+            {{#panel 'body'}}
+              {{composite module.postContent blogPosts=@content}}
+            {{/panel}}
+          {{/panel}}
+        {{else}}
+          {{composite module.postContent blogPosts=@content}}
+        {{/is}}
+      {{/is}}
+    {{/is}}
+  {{else}}
+    {{#is @index ../../filter ../../num}}
+      {{#is ../../../format}}
+        {{#panel}}
+          {{#panel 'body'}}
+            {{composite module.postContent blogPosts=@content}}
+          {{/panel}}
+        {{/panel}}
+      {{else}}
+        {{composite module.postContent blogPosts=@content}}
+      {{/is}}
+    {{/is}}
+  {{/is}}
+{{/posts}}

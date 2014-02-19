@@ -1,0 +1,14 @@
+{{#arrange src}}
+  {{#table class=modifier}}
+    {{#thead}}
+      {{#tr}}
+        {{#each tablehead}}
+          {{th thead}}
+        {{/each}}
+      {{/tr}}
+    {{/thead}}
+    {{#tbody}}
+      {{{@content}}}
+    {{/tbody}}
+  {{/table}}
+{{/arrange}}

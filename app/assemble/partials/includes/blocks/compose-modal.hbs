@@ -1,0 +1,22 @@
+{{#arrange src}}
+  {{! button trigger}}
+  {{#is button_label}}
+    {{button "lnk" "info" button_label href=(isHref Id) data-toggle="modal"}}
+  {{/is}}
+  {{! modal}}
+  {{#modal id=Id}}
+    {{#modal "head"}}
+      {{button "cls" "modal"}}
+      {{h4 title}}
+    {{/modal}}
+    {{#modal "body"}}
+      {{{@content}}}
+    {{/modal}}
+    {{#modal "foot"}}
+      {{button "btn" "default" dismiss_label data-dismiss="modal"}}
+      {{#is submit_label}}
+      {{button "btn" "primary" submit_label}}
+      {{/is}}
+    {{/modal}}
+  {{/modal}}
+{{/arrange}}

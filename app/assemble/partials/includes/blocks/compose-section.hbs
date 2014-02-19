@@ -1,0 +1,11 @@
+{{#arrange src}}
+  <{{sectionTag}}{{isClass modifier}}{{isId identifier}}>
+    {{#is container}}
+      {{#div class="container"}}
+        {{{@content}}}
+      {{/div}}
+    {{else}}
+      {{{@content}}}
+    {{/is}}
+  </{{sectionTag}}>
+{{/arrange}}

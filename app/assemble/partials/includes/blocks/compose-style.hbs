@@ -1,0 +1,20 @@
+---
+masthead: false
+containContent: false
+---
+{{#arrange src}}
+  {{#is masthead true}}
+    {{composite module.jumboStyle}}
+  {{/is}}
+  {{#is containContent true}}<div class="container">{{/is}}
+  {{h3 title id=(slugify title)}}
+  {{hr 'hr-inset1'}}
+  {{#p}}{{description}}{{/p}}
+  {{{@content}}}
+  {{#is pageFooter true}}
+    {{#footer}}
+      {{#p}}This styleguide has been planned to be used with {{a 'Assemble' class="link" href="http://assemble.io/"}} crafted {{a 'Twitter Bootstrap' class="link" href="http://twbs.github.io/bootstrap/"}} code.{{/p}}
+    {{/footer}}
+  {{/is}}
+  {{#is containContent true}}</div>{{/is}}
+{{/arrange}}

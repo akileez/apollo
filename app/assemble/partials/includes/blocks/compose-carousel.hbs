@@ -1,0 +1,23 @@
+{{#arrange src}}
+<section{{isClass secClass}} {{isId secID}}>
+  {{#div class="carousel slide" id=carouselID}}
+    {{#ol class="carousel-indicators"}}
+      {{#each listing}}
+        <li data-target="#{{../carouselID}}" data-slide-to="{{slide}}"{{isClass active}}></li>
+      {{/each}}
+    {{/ol}}
+    {{verbose 'Carousel items'}}
+    {{#div class="carousel-inner"}}
+      {{{@content}}}
+    {{/div}}
+
+    {{verbose 'Carousel nav'}}
+    {{#alink carouselID class="carousel-control left" data-slide="prev"}}
+      {{span class="glyphicon glyphicon-chevron-left"}}
+    {{/a}}
+    {{#alink carouselID class="carousel-control right" data-slide="next"}}
+      {{span class="glyphicon glyphicon-chevron-right"}}
+    {{/a}}
+  {{/div}}
+</section>
+{{/arrange}}

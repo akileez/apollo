@@ -1,0 +1,28 @@
+{{#arrange src}}
+  {{h3 title}}
+<!-- tabs -->
+{{#tabs type}}
+  {{#isnt type "below"}}
+  {{#tabs "ul"}}
+
+    {{#each tabs}}
+    {{#li sel=active}}{{a tab href=id data-toggle="tab"}}{{/li}}
+    {{/each}}
+
+  {{/tabs}}
+  {{/isnt}}
+  {{! Tab Content}}
+  {{#tabs "content"}}
+    {{{@content}}}
+  {{/tabs}}
+  {{! Tab Content}}
+  {{#is type "below"}}
+  {{#tabs "ul"}}
+    {{#each tabs}}
+    {{#li sel=active}}{{a tab href=id data-toggle="tab"}}{{/li}}
+    {{/each}}
+  {{/tabs}}
+  {{/is}}
+{{/tabs}}
+<!-- /tabs -->
+{{/arrange}}

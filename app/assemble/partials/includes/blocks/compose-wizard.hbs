@@ -1,0 +1,33 @@
+{{#arrange src}}
+{{#panel}}
+  {{#panel 'body'}}
+    {{#div id="MyWizard" class="wizard"}}
+      {{#ul class="steps"}}
+        {{#each wizStep}}
+          {{#is active}}
+            {{#li data-target=(isThat step "#step") class="active"}}
+              {{badge "info badge-bordered" step}}Step {{step}}{{span class="chevron"}}
+            {{/li}}
+          {{else}}
+            {{#li data-target=(isThat step "#step")}}
+              {{badge "warning badge-bordered" step}}Step {{step}}{{span class="chevron"}}
+            {{/li}}
+          {{/is}}
+        {{/each}}
+      {{/ul}}
+      {{#div class="actions"}}
+        {{#button 'btn' 'inverse btn-small btn-prev'}} {{icons fa.arrow-left}} {{/button}}
+        {{#button 'btn' 'inverse btn-small btn-next' data-last="Finish"}} {{icons fa.arrow-right}} {{/button}}
+      {{/div}}
+    {{/div}}
+    {{#div class="step-content"}}
+      {{{@content}}}
+    {{/div}}
+  {{/panel}}
+  {{#panel 'foot'}}
+    {{button 'inp' 'xs btn-inverse' 'prev' id="btnWizardPrev"}}
+    {{button 'inp' 'xs btn-inverse' 'next' id="btnWizardNext"}}
+    {{button 'inp' 'xs btn-inverse' 'current step' id="btnWizardStep"}}
+  {{/panel}}
+{{/panel}}
+{{/arrange}}

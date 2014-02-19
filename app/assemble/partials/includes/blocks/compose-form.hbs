@@ -1,0 +1,59 @@
+{{#arrange src}}
+{{#if format}}
+  {{#row}}
+    {{#column format}}
+    {{#if panel}}
+      {{#panel}}
+        {{#panel "body"}}
+        {{#if modifier}}
+          {{#form action class=modifier id=Id}}
+            {{{@content}}}
+          {{/form}}
+        {{else}}
+          {{#form action id=Id}}
+            {{{@content}}}
+          {{/form}}
+        {{/if}}
+        {{/panel}}
+      {{/panel}}
+    {{else}}
+      {{#if modifier}}
+        {{#form action class=modifier id=Id}}
+          {{{@content}}}
+        {{/form}}
+      {{else}}
+        {{#form action id=Id}}
+          {{{@content}}}
+        {{/form}}
+      {{/if}}
+    {{/if}}
+    {{/column}}
+  {{/row}}
+{{else}}
+  {{#if panel}}
+    {{#panel}}
+      {{#panel "body"}}
+      {{#if modifier}}
+        {{#form action class=modifier id=Id}}
+          {{{@content}}}
+        {{/form}}
+      {{else}}
+        {{#form action id=Id}}
+          {{{@content}}}
+        {{/form}}
+      {{/if}}
+      {{/panel}}
+    {{/panel}}
+  {{else}}
+    {{#if modifier}}
+      {{#form action class=modifier id=Id}}
+        {{{@content}}}
+      {{/form}}
+    {{else}}
+      {{#form action id=Id}}
+        {{{@content}}}
+      {{/form}}
+    {{/if}}
+  {{/if}}
+{{/if}}
+{{/arrange}}

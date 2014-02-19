@@ -1,0 +1,11 @@
+{{#arrange src}}
+{{#if listFormat}}
+  {{#ul class="list-group"}}
+    {{{@content}}}
+  {{/ul}}
+{{else}}
+  {{#div class="list-group"}}
+    {{{@content}}}
+  {{/div}}
+{{/if}}
+{{/arrange}}
