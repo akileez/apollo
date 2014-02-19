@@ -1,0 +1,13 @@
+{{verbose 'Navigation Links' 2}}
+  {{#is navigation 'dlinks01'}}
+    {{include '_navlink' route="article"}}
+    {{include '_navlink' route="article2"}}
+    {{include '_navlink' route="article3"}}
+    {{li sel="divider"}}
+    {{include '_navsub' subSection="More Stuff" navigation="slinks01" position="pullLeft"}}
+    {{! -----------------------------------------------------------------------}}
+  {{/is}}
+{{verbose 'Navigation Links' 2}}
+  {{#is navigation 'dlinks02'}}
+    {{! -----------------------------------------------------------------------}}
+  {{/is}}

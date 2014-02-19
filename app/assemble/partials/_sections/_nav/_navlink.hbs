@@ -1,0 +1,13 @@
+{{!-- For files in root level of website use buildDest in relPath helper. buildDest is the build destination directory of the
+      processed file, i.e., /build/deve/articles/dummy1.html where /build/dev is the destination build directory and
+      /articles/dummy1.html is the file to be processed. buildDest = /build/deve/articles/dummy1.html. This is extracted from
+      map.json which is generated from markdown-to-json(m2j.js)
+--}}
+{{#each map}}
+  {{#is ../route slug}}
+    <li{{isActive ../../page.slug slug}}><a href="{{relPath ../../page.dest buildDest}}">{{uppercase navTitle}}</a></li>
+  {{/is}}
+{{/each}}
+{{!-- {{#is ../../page.slug slug}} class="active"{{/is}} --}}
+{{!-- {{relPath ../../page.dest buildDest}} --}}
+{{!-- {{#li (isActive ../../page.slug slug)}}{{#a href=(relPath ../../page.dest buildDest)}}{{uppercase navTitle}}{{/a}}{{/li}} --}}

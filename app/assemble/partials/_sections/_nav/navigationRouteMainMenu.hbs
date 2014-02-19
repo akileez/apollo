@@ -1,0 +1,13 @@
+{{verbose 'Navigation Links' 2}}
+  {{#is navigation 'nlinks01'}}
+    {{!include '_navlink' route="home"}}
+    {{#is buildenv 'development'}}
+      {{#devopts.styleguide}}
+      {{include '_navlink' route="styleguide"}}
+      {{/devopts.styleguide}}
+    {{/is}}
+    {{include '_navdrop' navigation="dlinks01" navDisplay="Articles" dlabel="dlabel1"}}
+    {{include '_navlink' route="blog"}}
+    {{include '_navlink' route="contact"}}
+    {{! -----------------------------------------------------------------------}}
+  {{/is}}

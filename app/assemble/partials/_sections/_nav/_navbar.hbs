@@ -1,0 +1,26 @@
+---
+brand: default
+navposition: nav navbar-nav navbar-right
+---
+{{#navbar nav class}}
+  {{#navhead}}
+    {{#button 'nav' navid}}
+      {{span "Toggle navigation" class="sr-only"}}
+      {{#repeat 3}}{{span class="icon-bar"}}{{/repeat}}
+    {{/button}}
+    {{#is brand 'default'}}
+      {{#a href="/index.html" class="navbar-brand hidden-xs"}}
+        {{!img img.file sel='none'}}
+        {{site.title}}
+      {{/a}}
+      {{#p class="h2 pull-center pad-nav visible-xs"}}Navigation{{/p}}
+    {{else}}
+      {{!a navtitle class="brand h2" href="#"}}
+    {{/is}}
+  {{/navhead}}
+  {{#navbody navid}}
+    {{#ul navposition}}
+      {{include 'navigationRouteMainMenu'}}
+    {{/ul}}
+  {{/navbody}}
+{{/navbar}}

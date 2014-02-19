@@ -1,0 +1,22 @@
+{{#li class=(ifActive page.navSection navDisplay "dropdown")}}
+  {{#a id=dlabel class="dropdown-toggle" data-toggle="dropdown" href="#"}}{{uppercase navDisplay}} {{bold '' class="caret"}}{{/a}}
+  {{#ul class="dropdown-menu" role="menu" aria-labelledby=dlabel}}
+    {{include 'navigationRouteDropMenu'}}
+  {{/ul}}
+{{/li}}
+
+{{!--
+<li{{isActive page.navSection navDisplay class="dropdown"}}>
+or
+{{#li (isActive page.navSection navDisplay class="dropdown")}}
+or
+{{#li class=(isActive page.navSection navDisplay action="dropdown")}}
+
+<li{{#is page.navSection  navDisplay}} class="dropdown active"{{else}} class="dropdown" {{/is}}>
+  {{#a id=dlabel class="dropdown-toggle" data-toggle="dropdown" href="#"}}{{uppercase navDisplay}} {{bold '' class="caret"}}{{/a}}
+  {{#ul class="dropdown-menu" role="menu" aria-labelledby=dlabel}}
+    {{include 'navigationRouteDropMenu'}}
+  {{/ul}}
+</li>
+
+--}}

@@ -1,0 +1,18 @@
+{{#li class=(isThat (isThis position) "dropdown-submenu ")}}
+  {{#a tabindex="-1" href="#"}}{{subSection}}{{/a}}
+  {{#ul class="dropdown-menu"}}
+    {{include 'navigationRouteSubMenu'}}
+  {{/ul}}
+{{/li}}
+
+
+{{#draft}}
+<li  class="dropdown-submenu{{#is pullLeft}} pull-left{{/is}}">
+  {{#a tabindex="-1" href="#"}}{{subSection}}{{/a}}
+  {{#ul class="dropdown-menu"}}
+    {{include 'navigationRouteSubMenu'}}
+  {{/ul}}
+</li>
+{{! example usage in navigationRoute file}}
+{{include '_navsub' subSection="More Stuff" navigation="slinks01" position="pullLeft"}}
+{{/draft}}
