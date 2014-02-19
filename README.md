@@ -1,13 +1,19 @@
 Apollo
 =====
 
-Assemble Bootstrap crafted development environment featuring Grunt &amp; Handlebars including Javascript. This is my custom static site development environment.
+Assemble Bootstrap crafted development environment featuring Grunt &amp; Handlebars including Javascript. This is my way of building static sites.
 
-This is a **work in progress** as I move my working environment from dev machine to public github. Need to generalize files.
+This is a **work in progress** as I move my working environment from dev machine to public github. Everything is subject to change without notice. 
 
-more infomation in the [wiki](https://github.com/akileez/apollo/wiki) until I get everything running and site generated.
+more infomation in the [wiki](https://github.com/akileez/apollo/wiki) until I get a demo site generated.
+
+My initial goals for this project:
+---
+* develop a dev environment so as not to be dependent on any commerical product.
+* automate the creation of sitemaps, navigation, forms, and tables. All things I hate doing by hand.
+* learn javascript
+
 ## Requirements
-
 node, shelljs
 
 ## Settings
