@@ -1,0 +1,39 @@
+{{verbose "Automated script/snippet loading per page view" 2}}
+  {{#is scriptFiles}}
+    {{#process}}
+      {{js scriptFiles}}
+    {{/process}}
+  {{/is}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "Google Maps Sensor and Init: Files for Production" 2}}
+  {{#is page.slug  map.views-contact.slug}}
+    <script src="http://maps.google.com/maps/api/js?v=3&sensor=false&libraries=places"></script>
+    {{codesnippet js.snippet-googlemaps}}
+  {{/is}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "Mapbox: Testing" 2}}
+  {{#is page.slug  map.views-location.notInUse}}
+    <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
+    {{codesnippet js.snippet-mapbox}}
+  {{/is}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "Contact Form Validation: Files for Production" 2}}
+  {{#is page.slug  map.views-contact.notInUse}}
+    {{! Form validation usage using nod.js -- a jquery library}}
+    {{codesnippet js.snippet-nod}}
+  {{/is}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "Parallax Slider" 2}}
+  {{#is page.slug  map.views-index.notInUse}}
+    {{codesnippet js.snippet-parallax}}
+  {{/is}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "FitVids" 2}}
+  {{#is page.slug  map.views-testimonials.notInUse}}
+    {{codesnippet js.snippet-fitvids}}
+  {{/is}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "Scrollspy: Files for Production" 2}}
+  {{#or page.slug  map.articles-client-stories.slug map.styleguide-index.slug}}
+    {{codesnippet js.snippet-scrollspy}}
+  {{/or}}

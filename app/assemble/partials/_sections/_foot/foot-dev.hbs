@@ -1,0 +1,33 @@
+{{verbose "Helium: Test files for development. Not for production." 2}}
+  {{#devopts.helium}}
+    {{js js.helium}}
+    {{codesnippet js.snippet-helium}}
+  {{/devopts.helium}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "HTML-Inspector: Test files for development. Not for production." 2}}
+  {{#devopts.htmlInspector}}
+    {{js js.html-inspector}}
+    {{codesnippet js.snippet-htmlvalidation}}
+  {{/devopts.htmlInspector}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "Styleguide: Test files for development. Not for production." 2}}
+  {{#devopts.styleguide}}
+    {{!js js.highlight-pack}}
+    {{!<script>hljs.initHighlightingOnLoad();</script>}}
+    {{js js.prettify}}
+    {{codesnippet js.snippet-prettyprint}}
+    {{js js.styleguide}}
+  {{/devopts.styleguide}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "Holder: Test files for development. Not for production." 2}}
+  {{#devopts.holder}}
+    {{js js.holder}}
+  {{/devopts.holder}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "Viewport: Test files for development. Not for production." 2}}
+  {{#devopts.viewport }}
+    {{codesnippet js.snippet-viewport}}
+  {{/devopts.viewport}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "LiveReload: Test files for development. Not for production." 2}}
+  <script src="http://localhost:35729/livereload.js"></script>

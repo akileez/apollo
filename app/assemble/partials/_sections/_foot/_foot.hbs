@@ -1,0 +1,21 @@
+{{verbose 'Javascript files here for faster page loading.'}}
+{{verbose "Core Javascript files" 2}}
+  {{#is buildenv "development"}}
+    {{js js.jquery}}
+    {{#is buildstage 'not' "prod"}}
+      {{js files.bootstrapJS}}
+      {{js files.jquery}}
+      {{js files.custom}}
+      {{js files.vendor}}
+    {{else}}
+      {{js js.bootstrap-min}}
+      {{js js.plugins-min}}
+      {{js js.custom-min}}
+      {{js js.vendor-min}}
+    {{/is}}
+    {{include 'foot-base'}}
+    {{include 'foot-dev'}}
+  {{else}}
+    {{js js.scripts-min}}
+    {{include 'foot-base'}}
+  {{/is}}
