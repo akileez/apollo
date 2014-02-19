@@ -1,0 +1,50 @@
+{{verbose "Fonts"}}
+  {{#is buildstage "not" "test"}}
+    {{webfont fonts.collection.production}}
+  {{/is}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "CSS Base"}}
+  {{#is buildenv "development"}}
+    {{#is buildstage "dev"}}
+      {{css files.bootstrapCSS}}
+      {{css css._vendor}}
+      {{css css._theme}}
+    {{else}}
+      {{#is buildstage "prod"}}
+        {{! Bootstrap combined with overrides}}
+        {{css css._bs}}
+        {{css css._vendor}}
+        {{css css._theme}}
+      {{else}}
+        {{! Everything pre-compression}}
+        {{css css.styles}}
+      {{/is}}
+    {{/is}}
+  {{else}}
+    {{! Default file for Production Envrionment. This handles the Theme and Vendor files as well}}
+    {{css css.styles-min}}
+  {{/is}}
+  {{! -----------------------------------------------------------------------}}
+{{verbose "Page Views"}}
+  {{#is buildstage "not" "test"}}
+    {{! Production Section ---------------------------}}
+    {{verbose "Automated file loading per page view" 2}}
+      {{#is styleFiles}}
+        {{#process}}
+          {{css styleFiles}}
+        {{/process}}
+      {{/is}}
+    {{verbose "Mapbox Testing" 2}}
+      {{! set up for specific pages}}
+      {{#is page.slug map.views-location.notInUse}}
+      <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
+      {{/is}}
+    {{! Development Section --------------------------}}
+    {{#is buildenv "development"}}
+      {{#devopts.styleguide}}
+        {{css css.prettify}}
+        {{!css css.github}}
+      {{/devopts.styleguide}}
+    {{/is}}
+  {{/is}}
+  {{! -----------------------------------------------------------------------}}

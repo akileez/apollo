@@ -1,0 +1,67 @@
+{{#social.meta.facebook}}
+  {{#social.facebook}}
+    {{verbose "Facebook OpenGraph"}}
+    {{metaf 'type' type}}
+    {{metaf 'site' site_name}}
+    {{metaf 'desc' description}}
+    {{metaf 'url' url}}
+    {{metaf 'title' ../../title}}
+    {{metaf 'img' image}}
+    {{metaf 'fname' firstName}}
+    {{metaf 'lname' lastName}}
+    {{metaf 'email' email}}
+    {{metaf 'phone' phone}}
+  {{/social.facebook}}
+{{/social.meta.facebook}}
+
+{{#social.meta.twitter.summary}}
+  {{#social.twitter}}
+    {{verbose "Twitter Summary Card"}}
+    {{metat 'card'}}
+    {{metat 'site' twitter_site}}
+    {{metat 'creator' twitter_creator}}
+    {{metat 'title' title}}
+    {{metat 'desc' description}}
+    {{metat 'img' image}}
+  {{/social.twitter}}
+{{/social.meta.twitter.summary}}
+
+{{#social.meta.twitter.summary_lg}}
+  {{#social.twitter}}
+    {{verbose "Twitter Summary Large Image Card"}}
+    {{metat 'card_lg'}}
+    {{metat 'site' twitter_site}}
+    {{metat 'creator' twitter_creator}}
+    {{metat 'title' title}}
+    {{metat 'desc' description}}
+    {{metat 'img_src' image}}
+  {{/social.twitter}}
+{{/social.meta.twitter.summary_lg}}
+
+{{#social.meta.twitter.photo}}
+  {{#social.twitter}}
+    {{verbose "Twitter Photo Card"}}
+    {{metat 'card_photo'}}
+    {{metat 'site' twitter_site}}
+    {{metat 'creator' twitter_creator}}
+    {{metat 'title' title}}
+    {{metat 'img' image}}
+    {{metat 'img_w' width}}
+    {{metat 'img_h' heigth}}
+  {{/social.twitter}}
+{{/social.meta.twitter.photo}}
+
+{{#social.meta.twitter.gallery}}
+  {{#social.twitter}}
+    {{verbose "Twitter Gallery Card"}}
+    {{metat 'card_gallery'}}
+    {{metat 'site' twitter_site}}
+    {{metat 'creator' twitter_creator}}
+    {{metat 'title' title}}
+    {{metat 'desc' description}}
+    {{metat 'img_0' image}}
+    {{metat 'img_1' image}}
+    {{metat 'img_2' image}}
+    {{metat 'img_3' image}}
+  {{/social.twitter}}
+{{/social.meta.twitter.gallery}}

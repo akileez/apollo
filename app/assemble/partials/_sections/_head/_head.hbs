@@ -1,0 +1,19 @@
+{{verbose 'Meta'}}
+  {{meta "charset"}}
+  {{meta "viewport"}}
+  {{meta "description" description}}
+  {{meta "keywords" (default keywords site.keywords)}}
+  {{meta "author" site.author}}
+  {{#is buildenv "development"}}
+    {{meta "revised"}}
+  {{/is}}
+  <title>{{default title site.title}}</title>
+{{include 'head-social'}}
+{{include 'head-styles'}}
+{{verbose "Favicons"}}
+  {{ico img.apple-touch-icon-ipad3 'apple' 144}}
+  {{ico img.apple-touch-icon-iphone4 'apple' 114}}
+  {{ico img.apple-touch-icon-ipad 'apple' 72}}
+  {{ico img.apple-touch-icon-iphone 'apple'}}
+  {{ico img.favicon}}
+{{include 'head-scripts'}}
