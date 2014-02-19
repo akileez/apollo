@@ -26,9 +26,6 @@ Replaced grunt tasks which are run on the command line via grunt-shell
 
 Many THANKS to, and heavily influncened by:
 
-* [arkkimaagi Assemble template](https://github.com/Arkkimaagi/assemble-website-template)
---Arkkimaggi showed me what was possible with Assemble through his helpers and project structure.   
-* [badsyntax form helpers](https://github.com/badsyntax/handlebars-form-helpers)
---badsyntax showed me how to contstruct helpers without adding tons of html and most of all creating form helpers. 
-* [The Assemble Team](https://github.com/assemble/assemble)
---jonschlinkert and doowb for without them, none of this would be possible.  
+* [arkkimaagi Assemble template](https://github.com/Arkkimaagi/assemble-website-template): Arkkimaggi showed me what was possible with Assemble through his helpers and project structure.   
+* [badsyntax form helpers](https://github.com/badsyntax/handlebars-form-helpers): badsyntax showed me how to contstruct helpers without adding tons of html and most of all creating form helpers. 
+* [The Assemble Team](https://github.com/assemble/assemble): jonschlinkert and doowb for without them, none of this would be possible.  
