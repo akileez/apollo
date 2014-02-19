@@ -1,0 +1,51 @@
+---
+num0: 5
+num1: 1
+---
+{{#div class="blog-header"}}
+  {{h1 'The Bootstrap Blog'}}
+  {{p 'The official example template of creating a blog with Bootstrap.' class='lead'}}
+{{/div}}
+{{#row}}
+  {{#column 'sm-8 blog-main'}}
+    {{partial 'compose-blog' src='post*.hbs' range=true
+      filter0="lte" num0=num0
+      filter1="gt" num1=num1
+    }}
+    {{br}}
+    {{#div class="pull-center"}}
+      {{partial 'paginate' pagination}}
+    {{/div}}
+  {{/column}}
+  {{#column 'sm-3 col-sm-offset-1 blog-sidebar'}}
+    {{#div class="sidebar-module sidebar-module-inset"}}
+      {{h4 "About"}}
+      {{#p}}Etiam porta {{emphasis "sem malesuada magna"}} mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.{{/p}}
+    {{/div}}
+    {{#div class="sidebar-module"}}
+      {{h4 "Archives"}}
+      {{#ol "nostyle"}}
+        {{ilink "" "January 2014"}}
+        {{ilink "" "December 2013"}}
+        {{ilink "" "November 2013"}}
+        {{ilink "" "October 2013"}}
+        {{ilink "" "September 2013"}}
+        {{ilink "" "August 2013"}}
+        {{ilink "" "July 2013"}}
+        {{ilink "" "June 2013"}}
+        {{ilink "" "May 2013"}}
+        {{ilink "" "April 2013"}}
+        {{ilink "" "March 2013"}}
+        {{ilink "" "February 2013"}}
+      {{/ol}}
+    {{/div}}
+    {{#div class="sidebar-module"}}
+      {{h4 "Elsewhere"}}
+      {{#ol "nostyle"}}
+        {{ilink "" "GitHub"}}
+        {{ilink "" "Twitter"}}
+        {{ilink "" "Facebook"}}
+      {{/ol}}
+    {{/div}}
+  {{/column}}
+{{/row}}

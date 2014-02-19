@@ -1,0 +1,38 @@
+---
+pageHeader: "Full Page Width"
+pageHeaderDescriptor: Testing
+pageSummary: "Lorem {{small 'ipsum dolor sit'}} amet, consectetur adipisicing elit. Laborum, ratione, alias ex vitae assumenda reiciendis necessitatibus repellat excepturi neque omnis incidunt facere laudantium minus. usage:  inline {{code '{{alink \"body\"}}'}} compiles to --> {{code '<a href=\"#\">body</a>'}}. Perspiciatis, accusantium eos dolor minus molestias et suscipit amet quibusdam dicta nihil ex labore nemo cum tenetur ad in dolore doloremque consequuntur nesciunt ducimus. Voluptatem, minus, reprehenderit officiis voluptates alias accusantium sit quia animi rerum aliquid doloribus blanditiis. Accusamus, commodi, odio, incidunt, mollitia sed sapiente assumenda provident repudiandae culpa animi ad pariatur quidem quam ipsa voluptatum corporis delectus eius dolore nulla quo! Accusantium, temporibus, soluta, "
+Company: Business Corp
+Address: 123 Main Street
+Location: "Philadelphia, PA 10012"
+Contact: John Doe
+Phone: 11234567890
+Email: "johndoe@buinesscorp.com"
+---
+{{composite module.jumbo1}}
+<section class="content-section">
+  {{pageheader 'Page Subtitle' 'written by Keith Williams, 28 JULY 2013'}}
+  {{#p sel="lead"}}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, eius, consectetur, libero corrupti velit ea dolore natus in iure dicta aliquam laborum amet nemo obcaecati sequi fugiat praesentium dolorem quia quam adipisci similique id voluptates magni.{{/p}}
+
+   {{lorem ipsum.s3}}
+
+   {{#address}}
+   {{strong Company}} {{br}}
+   {{Address}} {{br}}
+   {{Location}} {{br}}
+   {{/address}}
+
+   {{#address}}
+     {{strong Contact}} {{br}}
+     {{abbr 'Phone' "P:"}} {{formatPhone Phone}} {{br}}
+     {{a Email href=(isThat Email "mailto:")}} {{br}}
+   {{/address}}
+
+
+  {{#p}}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, commodi, voluptates, repudiandae aperiam impedit facilis ut iste molestias optio laboriosam laudantium aspernatur facere! Eos, asperiores, tempore sequi impedit {{code 'distinctio'}} deserunt ex delectus possimus animi eveniet vel dolor ea reiciendis inventore ipsa eius corrupti sapiente hic vero veniam repellat neque maxime.{{/p}}
+  {{#div class="pull-right"}}{{img img.desktop}}{{/div}}
+  {{lorem ipsum.p1}}
+  {{lorem ipsum.p3}}
+
+  {{space 40}}
+</section>

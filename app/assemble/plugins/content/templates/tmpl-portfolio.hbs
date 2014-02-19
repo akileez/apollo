@@ -1,0 +1,46 @@
+---
+
+---
+{{#jumbotron}}
+  {{h1 (uppercase "A portfolio item")}}
+  {{p "and a small description can go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat."}}
+  {{#div class="pull-right"}}
+    {{img img.desktop}}
+  {{/div}}
+  {{#ul class="fa-ul list-unstyled"}}
+    {{#li}}{{icons fa.check "fa-li"}}CSS design{{/li}}
+    {{#li}}{{icons fa.check "fa-li"}}HTML markup{{/li}}
+    {{#li}}{{icons fa.check "fa-li"}}SEO and analytics{{/li}}
+    {{#li}}{{icons fa.check "fa-li"}}PHP development{{/li}}
+  {{/ul}}
+  {{clearfix}}
+{{/jumbotron}}
+
+
+{{#section}}
+  {{pageheader "Project Details"}}
+  {{p "Lorem ipsum dolor sit amet, consectetur adipisicing elit."}}
+  {{p "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, in, maxime, perferendis, possimus a unde ullam delectus porro officiis laudantium dolorem aperiam ad est animi consequuntur voluptas harum quaerat dicta fugit iusto consequatur inventore labore illum. Perspiciatis, corrupti nemo ea distinctio. Iusto facere quisquam optio beatae excepturi exercitationem voluptas laboriosam!"}}
+
+  {{#ul class="fa-ul list-unstyled"}}
+    {{#li}}{{icons fa.check "fa-li"}}CSS design{{/li}}
+    {{#li}}{{icons fa.check "fa-li"}}HTML markup{{/li}}
+    {{#li}}{{icons fa.check "fa-li"}}SEO and analytics{{/li}}
+    {{#li}}{{icons fa.check "fa-li"}}PHP development{{/li}}
+  {{/ul}}
+
+  {{space 40}}
+{{/section}}
+{{#section}}
+  {{pageheader (uppercase "What the Client Said")}}
+  {{#row}}
+    {{#column 'lg-10 col-lg-offset-1'}}
+      {{#blockquote class="blockquote-fancy blockquote-fancy-icon"}}
+        {{p "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."}}
+      {{/blockquote}}
+    {{/column}}
+  {{/row}}
+{{/section}}

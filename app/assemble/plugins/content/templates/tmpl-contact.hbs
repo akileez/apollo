@@ -1,0 +1,42 @@
+{{#div class="slider-wrapper"}}
+  {{#div class="input-group"}}
+    {{#span class="input-group-addon"}}
+        {{icons fa.map-marker}}
+    {{/span}}
+    {{input "text" "Enter your location" id="search"}}
+  {{/div}}
+  {{div id="map"}}
+{{/div}}
+{{space 20}}
+{{div id="directions-result"}}
+{{space 40}}
+
+{{#section}}
+  {{#container}}
+    {{pageheader (uppercase "We Like Talking") "Lorem ipsum dolor sit amet, consectetur adipisicing elit."}}
+    {{#row}}
+      {{#column "sm-6"}}
+        {{#p}}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, debitis, necessitatibus, qui quis illo atque neque earum praesentium ipsam temporibus delectus sit illum enim voluptate tenetur impedit repellendus reiciendis voluptatibus aperiam odit. Distinctio, animi quos dignissimos deleniti laboriosam earum officia!{{/p}}
+
+        {{#ul "icons"}}
+          {{#li}}{{#p}}{{icons fa.home "fa-li fa-lg"}}Some st, Somewhere{{/p}}{{/li}}
+          {{#li}}{{#p}}{{icons fa.envelope "fa-li fa-lg"}}info@something.com{{/p}}{{/li}}
+          {{#li}}{{#p}}{{icons fa.globe "fa-li fa-lg"}}www.something.com{{/p}}{{/li}}
+        {{/ul}}
+      {{/column}}
+      {{#column "sm-5 col-md-4 col-sm-offset-1"}}
+        {{#form "email.php" id="contactView"}}
+          {{form_input "text" "name" "Name" "First Last Name"}}
+          {{form_input "email" "email" "Email" "your@email.com"}}
+          {{form_input "tel" "phone" "Phone Number" "(123) 456-7890"}}
+          {{form_textarea "message" "Message" "Type Message Here" "5"}}
+          {{#form_action}}
+          {{form_submit "primary" "Send email"}}
+          {{form_reset "warning" "Reset"}}
+          {{/form_action}}
+        {{/form}}
+      {{/column}}
+    {{/row}}
+    {{space 40}}
+  {{/container}}
+{{/section}}

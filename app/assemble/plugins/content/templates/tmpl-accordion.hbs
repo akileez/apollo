@@ -1,0 +1,52 @@
+---
+pageHeader: Accordion
+pageHeaderDescriptor: using YFM to define accordion template.
+pageSummary:
+tester:
+  accordion:
+  - context: "disabled"
+    childId: "qOne"
+    heading: true
+    panel_title: "Are we there yet?"
+    panel_content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+
+  - context: "disabled"
+    childId: "qTwo"
+    heading: true
+    panel_title: "What is your name"
+    panel_content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+
+  - context: "disabled"
+    childId: "qThree"
+    heading: true
+    panel_title: "Are you a boy or girl"
+    panel_content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+
+  - context: "disabled"
+    childId: "qFour"
+    heading: true
+    panel_title: "This is fun"
+    panel_content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+
+  - context: "disabled"
+    childId: "qFive"
+    heading: true
+    panel_title: "Done yet?"
+    panel_content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+
+---
+{{composite module.jumbo1}}
+
+{{#row}}
+  {{#column "sm-9"}}
+    {{pageheader 'Got Questions?' 'we got some answers'}}
+    {{#p}}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, maxime, quisquam, corporis temporibus accusantium voluptate similique beatae voluptas distinctio itaque tenetur ratione natus possimus maiores ab nostrum tempora commodi odit esse inventore. Fugit, illo, quod, doloribus necessitatibus eum repellendus nostrum deserunt sunt facilis magni odio explicabo nihil possimus quasi excepturi aliquam ducimus ex tempore sapiente atque accusamus modi officia numquam dicta ullam itaque blanditiis. Quibusdam, incidunt porro aut laboriosam. Eveniet.{{/p}}
+    {{partial 'accordion' tester}}
+  {{/column}}
+  {{#column 'sm-3'}}
+    {{pageheader 'Want More?'}}
+    {{p 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, qui, eligendi, suscipit, debitis dolores voluptatibus rem quod doloribus voluptate vitae obcaecati sit perferendis delectus magni.'}}
+    {{button 'btn' 'primary' 'Send email'}}
+  {{/column}}
+{{/row}}
+
