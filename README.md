@@ -13,6 +13,11 @@ My initial goals for this project:
 * automate the creation of sitemaps, navigation, forms, and tables. All things I hate doing by hand.
 * learn javascript
 
+Caveats:  
+* heavy use of handlebars. very little html code. I went crazy learning javascript by way of handlebars helpers. Practically everything is a helper. Logic all over the place. Not the prescribed way to use Handlebars.
+* heavy use of partials/includes. I love modularity, flexibility and DRY. It can be difficult to follow the code sometimes based on all the moving parts.
+* unorthodox project setup. from directory structure (multiple folders for compartmentalization) to node modules (dependencies linked or loaded separately to take advantage of my development machine -- homebrew/zsh/globally installed modules)
+
 ## Requirements
 node, shelljs
 
