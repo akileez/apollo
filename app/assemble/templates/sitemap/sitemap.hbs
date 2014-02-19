@@ -1,0 +1,21 @@
+---
+layout: sitemap.xml
+---
+{{#map.views-index}}
+<url>
+  <loc>{{../site.url}}/</loc>
+  <lastmod>{{#if lastmod}}{{iso8601Date}}{{else}}{{moment format="YYYY-MM-DDTHH:mm:ssZ"}}{{/if}}</lastmod>
+  <changefreq>{{default updateFrequency "monthly"}}</changefreq>
+  <priority>{{default priority "0.5"}}</priority>
+</url>
+{{/map.views-index}}
+{{#each map}}
+  {{#is sitemap}}
+    <url>
+      <loc>{{../../site.url}}/{{isThis buildDir "/"}}{{buildFileExt}}</loc>
+      <lastmod>{{#if lastmod}}{{iso8601Date}}{{else}}{{moment format="YYYY-MM-DDTHH:mm:ssZ"}}{{/if}}</lastmod>
+      <changefreq>{{default updateFrequency "monthly"}}</changefreq>
+      <priority>{{default priority "0.5"}}</priority>
+    </url>
+  {{/is}}
+{{/each}}

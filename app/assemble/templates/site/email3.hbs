@@ -1,0 +1,29 @@
+<?php
+
+require 'assets/php/phpmailer/class.phpmailer.php';
+
+// Instantiate your new class
+$mail = new PHPMailer();
+
+$mail->IsMail();  // telling the class to use mail()
+
+$mail->AddAddress('{{site.email}}');
+$mail->From     = $_POST['email'];
+$mail->FromName = $_POST['name'];
+
+// Now you only need to add the necessary stuff
+
+$mail->Subject = '{{site.emailSubject}}';
+$mail->Body    = "name: ". $_POST['name']. "\n contact number: ". $_POST['number']. "\n message: ". $_POST['message']. "\n marketing: ". $_POST['marketing']. "\n newsletter: ". $_POST['newsletter'];
+
+
+
+if(!$mail->Send())
+{
+   echo "There was an error sending the message" . $mail->ErrorInfo;
+   exit;
+}
+// echo 'Message has been sent';
+header("Location: thank-you.html");
+
+?>

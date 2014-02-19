@@ -1,0 +1,24 @@
+---
+layout: sitemap.xml
+published: false
+---
+{{#map.views-index}}
+<url>
+  <loc>{{../site.url}}/</loc>
+  <lastmod>{{#if lastmod}}{{iso8601Date}}{{else}}{{moment format="YYYY-MM-DDTHH:mm:ssZ"}}{{/if}}</lastmod>
+  <changefreq>{{default updateFrequency "monthly"}}</changefreq>
+  <priority>{{default priority "0.5"}}</priority>
+</url>
+{{/map.views-index}}
+<url>
+  <loc>{{site.url}}/{{assets}}/{{img.Waiver}}</loc>
+  <lastmod>{{moment format="YYYY-MM-DDTHH:mm:ssZ"}}</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>{{site.url}}/{{assets}}/{{img.ZumbaWaiver}}</loc>
+  <lastmod>{{moment format="YYYY-MM-DDTHH:mm:ssZ"}}</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.64</priority>
+</url>

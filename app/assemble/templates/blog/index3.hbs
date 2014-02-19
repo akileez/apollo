@@ -1,0 +1,47 @@
+---
+# Metadata
+title: Blog3
+description:
+keywords:
+collections:
+tags:
+
+# Sitemap
+sitemap: true
+updateFrequency:
+lastmod: false
+date:
+priority:
+
+# Layout
+layout: layout-site-default
+stickyFooter: false
+scrollSpy: false
+container: true
+
+# Navigation
+slug: blog3
+navTitle: Blog3
+navSection:
+navSubSection:
+
+# Page
+pageHeader:
+pageHeaderDescriptor:
+pageSummary:
+---
+{{#row}}
+{{#column 'sm-8 col-sm-offset-2'}}
+{{#div class="blog-header"}}
+  {{#h2}} Posts {{small "a list example"}}{{/h2}}
+  {{!p 'The un-official example template of creating a blog with Bootstrap.' class='lead'}}
+{{/div}}
+{{space 40}}
+{{#posts 'post*.hbs'}}
+  {{#h4}}{{a title href=(isThat (isThis (slugify title) '.html') "posts/")}}{{/h4}}
+  {{#bold}} {{moment date format='L'}} {{/bold}}
+  {{space 20}}
+{{/posts}}
+{{partial 'paginate' pagination}}
+{{/column}}
+{{/row}}

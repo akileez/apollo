@@ -1,0 +1,10 @@
+---
+all: ['/assets/img', '/assets/php']
+sites: ['http://example.com', 'http://www.mysite.com']
+---
+
+{{robots ua='*' disallow=all}}
+{{robots ua='Googlebot-Image' disallow="/"}}
+{{robots sitemap=(isThis site.domain "/sitemap.xml")}}
+{{robots sitemap=(isThis site.domain "/sitemap-assets.xml")}}
+{{robots sitemap=(isThis site.domain "/sitemap-blog.xml")}}

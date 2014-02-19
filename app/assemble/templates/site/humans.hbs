@@ -1,0 +1,30 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+  {{#team.peeps}}
+  {{titles}}: {{name}}
+  {{#twitter}}Twitter: {{this}}{{/twitter}}
+  {{#site}}Site: {{this}}{{/site}}
+  {{#github}}GitHub: {{this}}{{/github}}
+  {{/team.peeps}}
+
+{{#is (pkg "contributors")}}# THANKS
+  {{#each (pkg "contributors")}}
+  {{this}}{{/each}}
+{{/is}}
+
+# TECHNOLOGY COLOPHON
+
+  Version      : {{pkg "version"}}
+  Last Update  : {{moment format="YYYY/MM/DD HH:mm:ssZ"}}
+  Language     : {{team.colo.lang}}
+  Standards    : {{team.colo.stand}}
+  Technologies : {{team.colo.tech}}
+  Components   : {{team.colo.comp}}
+  Software     : {{team.colo.soft}}
+  Automation   : {{team.colo.auto}}
+  {{#draft}}
+   {{#keys (pkg "devDependencies")}}
+    {{key}}{{/keys}}
+  {{/draft}}

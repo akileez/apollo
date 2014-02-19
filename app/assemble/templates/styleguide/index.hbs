@@ -1,0 +1,86 @@
+---
+# Metadata
+title: Styleguide
+description: A tool for showing the website skin and testing it out.
+keywords:
+collections:
+tags:
+# Sitemap
+sitemap: false
+updateFrequency: daily
+lastmod: false
+date: 2013-07-19 16:07:17-0400
+priority: "0.2"
+# Layout
+layout: layout-site-styles
+stickyFooter: false
+scrollspy: true
+container: false
+containerAlt: iso-container-fluid
+# Navigation
+slug: styleguide
+navTitle: Styles
+navSection: Styleguide
+navSubSection:
+# Page
+published: true
+pageTitle: false
+pageHeader: Styleguide
+pageHeaderClass:
+pageHeaderDescriptor: HTML Elements
+pageSummary: A tool for showing a website skin and testing it out.
+---
+
+{{h3 "About"}}
+{{#p}}This styleguide has been planned to be used with {{a 'Assemble' class="link" href="http://assemble.io/"}} crafted {{a 'Twitter Bootstrap' class="link" href="http://twbs.github.io/bootstrap/"}} code.{{/p}}
+
+{{! http://brettjankord.com/projects/style-guide-boilerplate/ }}
+{{!-- --}}
+{{#row}}
+{{#column 'sm-3'}}
+  {{#sidenav}}
+    {{composite module.sg-sidenav}}
+  {{/sidenav}}
+{{/column}}
+{{#column 'sm-9'}}
+{{h2 "Typography Units" id="base-styles1"}}
+{{include 'compose-style' src=module.sg-colors}}
+{{include 'compose-style' src=module.sg-headings}}
+{{include 'compose-style' src=module.sg-paragraphs}}
+{{include 'compose-style' src=module.sg-typography}}
+{{include 'compose-style' src=module.sg-textelements}}
+{{h2 "Base styles" id="base-styles2"}}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, accusantium vel optio debitis quibusdam natus dolorem! Animi, impedit similique molestias.</p>
+{{include 'compose-style' src=module.sg-fonts}}
+{{include 'compose-style' src=module.sg-preformat}}
+{{include 'compose-style' src=module.sg-forms}}
+{{include 'compose-style' src=module.sg-forms-hb}}
+{{include 'compose-style' src=module.sg-lists}}
+{{include 'compose-style' src=module.sg-table-basic}}
+{{include 'compose-style' src=module.sg-quotes}}
+{{h2 "Elements" id="elements"}}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, sint, sapiente quidem eaque fugit nemo quam maxime recusandae neque doloremque ipsam nostrum! Architecto, neque accusantium aperiam est ex numquam beatae.</p>
+{{include 'compose-style' src=module.sg-address}}
+{{include 'compose-style' src=module.sg-alerts}}
+{{include 'compose-style' src=module.sg-breadcrumb}}
+{{include 'compose-style' src=module.sg-buttons}}
+{{include 'compose-style' src=module.sg-buttons-badges}}
+{{include 'compose-style' src=module.sg-badges}}
+{{include 'compose-style' src=module.sg-labels-raised}}
+{{h2 "Components" id="components"}}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, sunt suscipit quod cupiditate autem accusamus labore velit aperiam iste fugiat aut voluptates error magni cumque fugit atque vitae corrupti placeat.</p>
+{{include 'compose-style' src=module.sg-isotope}}
+{{include 'compose-style' src=module.sg-listgroup}}
+{{h2 "Helpers" id="helpers"}}
+{{p "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, nemo rerum asperiores vero inventore eum quis nulla quo possimus soluta? Eius, nobis, iusto impedit assumenda optio quaerat exercitationem alias accusamus."}}
+{{include 'compose-style' src=module.sg-metadata}}
+{{include 'compose-style' src=module.sg-lorem}}
+{{include 'compose-style' src=module.sg-truncate}}
+{{h2 "Misc" id="misc"}}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, nemo rerum asperiores vero inventore eum quis nulla quo possimus soluta? Eius, nobis, iusto impedit assumenda optio quaerat exercitationem alias accusamus.</p>
+{{include 'compose-style' src=module.sg-visibility}}
+{{include 'compose-style' src=module.sg-time}}
+{{include 'compose-style' src=module.sg-video}}
+{{include 'compose-style' src=module.sg-audio}}
+{{/column}}
+{{/row}}
