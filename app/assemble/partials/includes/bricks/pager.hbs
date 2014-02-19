@@ -1,0 +1,14 @@
+{{#ul class=(default modifier "pager")}}
+  {{#is pagination.currentPage 1}}
+    {{#li class="pager-heading"}}{{a "Blog" href=(relative page.dest "blog/index.html")}}{{/li}}
+  {{/is}}
+  {{#is pagination.currentPage "not" 1}}
+    {{#li}}{{a "&laquo; Previous" href=(relative page.dest prev.dest)}}{{/li}}
+  {{/is}}
+  {{#is pagination.currentPage "not" pagination.totalPages}}
+    {{#li}}{{a "Next &raquo;" href=(relative page.dest next.dest)}}{{/li}}
+  {{/is}}
+  {{#is pagination.currentPage pagination.totalPages}}
+    {{#li class="disabled"}}{{a "Next &raquo;" href=(relative page.dest next.dest)}}{{/li}}
+  {{/is}}
+{{/ul}}

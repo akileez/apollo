@@ -1,0 +1,20 @@
+---
+parentId: "accordion-test"
+context: disabled
+---
+{{#accordion parent=parentId}}
+  {{#each accordion}}
+    {{#panel ../../context}}
+      {{#accordion 'head' parent=../../../parentId child=childId}}
+        {{#if panel_heading}}
+        {{h4 panel_heading}}
+        {{else}}
+        {{strong panel_title}}
+        {{/if}}
+      {{/accordion}}
+      {{#accordion 'body' child=childId}}
+        {{{panel_content}}}
+      {{/accordion}}
+    {{/panel}}
+  {{/each}}
+{{/accordion}}

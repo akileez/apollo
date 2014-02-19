@@ -1,0 +1,29 @@
+{{#address}}
+  {{strong name}}{{br}}
+  {{street}}{{br}}
+  {{town}}, {{state}}, {{zip}}{{br}}
+  {{#is phonenumber}}
+    {{abbr "Phone" "P:"}} {{phonenumber}}
+  {{/is}}
+{{/address}}
+
+{{#is contactName}}
+{{#address}}
+  {{strong contactName}}{{br}}
+  {{a mailTo href=(isThat mailTo "mailto:")}}
+{{/address}}
+{{/is}}
+
+{{#draft}}
+{{#address}}
+ {{strong Company}} {{br}}
+ {{Address}} {{br}}
+ {{Location}} {{br}}
+ {{/address}}
+
+ {{#address}}
+   {{strong Contact}} {{br}}
+   {{abbr 'Phone' "P:"}} {{formatPhone Phone}} {{br}}
+   {{a Email href=(isThat Email "mailto:")}} {{br}}
+ {{/address}}
+ {{/draft}}
