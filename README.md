@@ -1,7 +1,7 @@
 Apollo
 =====
 
-This is an Assemble Bootstrap crafted _development environment_ featuring Grunt &amp; Handlebars -- including Javascript. This is how I develop static sites. I don't expect this project to work the way you do. It works the way I do, think and process information. It is being posted for the public to help others generate ideas for their own build systems. I have been educated by the open source community and this is my way of giving back. 
+This is an Assemble Bootstrap crafted _development environment_ featuring Grunt &amp; Handlebars -- including Javascript. This is how I develop static sites. I don't expect this project to work the way you do. It works the way I do, think and process information. It is being posted for public comsumption to help others generate ideas for their own build systems. I have been educated by the open source community and this is my way of giving back. 
 
 This is a **work in progress** as I move my working environment from private to public. Everything is subject to change without notice. 
 
