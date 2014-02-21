@@ -9,6 +9,7 @@
 
   # Production variables
   jQueryCDN: false
+  modernizr: true
 
   # Anchor links in headings
   automatic_anchors_in_headings: false
