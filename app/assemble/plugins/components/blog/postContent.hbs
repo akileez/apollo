@@ -1,0 +1,9 @@
+{{#h2}}{{a title href=(isThat (isThis (slugify title) '.html') "posts/")}}{{/h2}}
+{{hr}}
+{{composite module.postInfo}}
+{{#is pageSummary}}
+  {{#process}}{{{pageSummary}}}{{/process}}
+{{else}}
+  {{{blogPosts}}}
+{{/is}}
+{{a 'Read More… &rarr;' href=(isThat (isThis (slugify title) '.html') "posts/")}}
