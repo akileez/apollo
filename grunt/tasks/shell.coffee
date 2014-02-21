@@ -7,6 +7,7 @@ module.exports =
         'mv README2.md README.md'
     ].join('&&')
 
+  # This is a test. Not ready for production in any shape or form.
   changelog:
     options:
       stdout: true
