@@ -12,13 +12,6 @@ module.exports =
       stdout: true
     command: 'changelog akileez/HTML5-Handlebars -m all > CHANGELOG.md'
 
-  # rename dot files using command line.
-  # replaces grunt-rename
-  renameDotfileBuild:
-    options:
-      stdout: true
-    command: 'mv <%= dir.build %>/htaccess <%= dir.build %>/.htaccess'
-
   # Radical! gzip files in distribution directory
   # replaces grunt-compress
   compress:

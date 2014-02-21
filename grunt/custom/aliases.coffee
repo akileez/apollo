@@ -98,7 +98,6 @@ module.exports = (grunt) ->
   alias 'prepbuild'     , 'Clean build directory, Copy files to.', [
     "clean:build"
     "copy:build"
-    "shell:renameDotfileBuild"
   ]
   alias 'prepstage'     , 'Clean build directory, Copy files to.', [
     "clean:stage"
