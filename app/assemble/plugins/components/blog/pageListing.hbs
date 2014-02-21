@@ -1,0 +1,15 @@
+---
+# Original:
+# <a href="../{{isThis buildDir "/"}}{{isThis (slugify title) ".html"}}">{{title}}</a>
+---
+{{#ul 'nostyle'}}
+  {{#each map}}
+  {{#li}}
+    {{#is buildDir "not" "blog/posts"}}
+      {{a slug href=(isThat autolink "../")}}
+    {{else}}
+    {{a title href=(isThis (isThat (isThis buildDir "/") "../") (isThis (slugify title) ".html"))}}
+    {{/is}}
+  {{/li}}
+  {{/each}}
+{{/ul}}
