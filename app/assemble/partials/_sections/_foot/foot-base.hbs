@@ -34,6 +34,6 @@
   {{/is}}
   {{! -----------------------------------------------------------------------}}
 {{verbose "Scrollspy: Files for Production" 2}}
-  {{#or page.slug  map.articles-client-stories.slug map.styleguide-index.slug}}
+  {{#is page.slug  map.styleguide-index.slug}}
     {{codesnippet js.snippet-scrollspy}}
-  {{/or}}
+  {{/is}}
