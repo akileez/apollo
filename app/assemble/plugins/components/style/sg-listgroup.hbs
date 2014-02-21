@@ -1,0 +1,48 @@
+---
+title: List Group
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, dignissimos, nihil, doloremque, ex reprehenderit expedita non iste repudiandae quibusdam magni laudantium nisi dolore eaque atque fugiat! Rerum perferendis ullam quos aliquid eius dolor quas corporis iste error numquam! Ab quibusdam rem labore veniam tenetur sapiente similique tempora architecto exercitationem modi."
+---
+
+{{#styleguide "List Group Custom Content" '
+{{#div class="list-group"}}
+  {{#a class="list-group-item active"}}
+    {{h4 "List group item heading" class="list-group-item-heading"}}
+    {{#p class="list-group-item-text"}}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dolore ad magnam voluptatem dolorem dolorum!{{/p}}
+  {{/a}}
+  {{#a class="list-group-item"}}
+    {{h4 "List group item heading" class="list-group-item-heading"}}
+    {{#p class="list-group-item-text"}}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dolore ad magnam voluptatem dolorem dolorum!{{/p}}
+  {{/a}}
+  {{#a class="list-group-item"}}
+    {{h4 "List group item heading" class="list-group-item-heading"}}
+    {{#p class="list-group-item-text"}}Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dolore ad magnam voluptatem dolorem dolorum!{{/p}}
+  {{/a}}
+{{/div}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "List Group Custom Modules" '
+{{include "compose-listgrp" src=module.listgroup1}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Compose List Group Partial" '
+{{#if listFormat}}
+  {{#ul class="list-group"}}
+    {{{@content}}}
+  {{/ul}}
+{{else}}
+  {{#div class="list-group"}}
+    {{{@content}}}
+  {{/div}}
+{{/if}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Compose List Group Module" '
+---
+listFormat: true
+---
+{{li "Cras justo odio" sel="group"}}
+{{li "Dapibus ac facilisis in" sel="group"}}
+{{li "Morbi leo risus" sel="group"}}
+{{li "Porta ac consectetur ac" sel="group"}}
+{{li "Vestibulum at eros" sel="group"}}
+'}}{{.}}{{/styleguide}}

@@ -1,0 +1,26 @@
+---
+title: Typography
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, minima aut itaque eaque amet optio magnam! Incidunt, neque, non, rem repudiandae nemo dolores perspiciatis officia rerum adipisci doloremque dolorem illum est saepe et ipsa magni perferendis. Iste, mollitia, labore, explicabo, placeat maxime delectus minus exercitationem id officia itaque sint repellendus!"
+tags: typography
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{typography}}'}}
+pageSummary: "Handlebars Helpers for base typography"
+---
+{{#styleguide "Typography" '
+{{#p}}Hey, lets do something fun here. {{small "This is meant to be treated as fine print."}} Oh, and here we say something really {{strong "important"}} and {{emphasis "elegant"}} using {{abbr "attribute" "attr"}} and {{abbr "HyperText Markup Language" "HTML" class="initialism"}}.{{/p}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Alignment Classes" '
+{{#p sel="left"}}Left aligned text.{{/p}}
+{{#p sel="center"}}Center aligned text.{{/p}}
+{{#p sel="right"}}Right aligned text.{{/p}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Emphasis Classes" '
+{{#p sel="muted"}}Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.{{/p}}
+{{#p sel="warning"}}Etiam porta sem malesuada magna mollis euismod.{{/p}}
+{{#p sel="danger"}}Donec ullamcorper nulla non metus auctor fringilla.{{/p}}
+{{#p sel="info"}}Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.{{/p}}
+{{#p sel="success"}}Duis mollis, est non commodo luctus, nisi erat porttitor ligula.{{/p}}
+'}}{{.}}{{/styleguide}}
+

@@ -1,0 +1,19 @@
+---
+title: "Fonts"
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, labore ab harum neque porro quis. Deleniti, itaque, minima, dolores nostrum fugit a cumque esse ullam laboriosam eveniet similique autem corporis."
+tags: typography
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{code}}'}}
+pageSummary: A Handlebars Helper tool for marking up code inline and in block format.
+---
+
+{{#styleguide "Font Stacks" '
+{{#p}}Primary font: "HelveticaNeue", "Helvetica", "Arial", sans-serif;{{/p}}
+{{#p}}{{#emphasis}}Primary font italic: "HelveticaNeue", "Helvetica", "Arial", sans-serif;{{/emphasis}}{{/p}}
+{{#p}}{{#strong}}Primary font bold: "HelveticaNeue", "Helvetica", "Arial", sans-serif;{{/strong}}{{/p}}
+{{br}}
+{{#p class="font-secondary"}}Secondary font: Georgia, Times, "Times New Roman", serif;{{/p}}
+{{#p class="font-secondary"}}{{#emphasis}}Secondary font italic: Georgia, Times, "Times New Roman", serif;{{/emphasis}}{{/p}}
+{{#p class="font-secondary"}}{{#strong}}Secondary font bold: Georgia, Times, "Times New Roman", serif;{{/strong}}{{/p}}
+'}}{{.}}{{/styleguide}}
+

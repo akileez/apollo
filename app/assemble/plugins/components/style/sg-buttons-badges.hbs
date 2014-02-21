@@ -1,0 +1,121 @@
+---
+title: "Buttons, Badges and Lables"
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, iste, debitis eligendi expedita tempora necessitatibus consectetur incidunt consequuntur quia pariatur culpa sunt harum repellat doloribus."
+tag: elements
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{button}}'}}
+pageSummary: A Handlebars Helper tool for generating componenet buttons in multiple formats.
+---
+  {{#styleguide "Buttons and Badges" '
+{{#button "div" "primary btn-lg"}}
+  {{icons fa.comment}}
+  Messages
+  {{badge "danger badge-bordered badge-raised" "12"}}
+{{/button}}
+{{#button "div" "success btn-lg"}}
+  {{icons fa.envelope}}
+  Emails
+  {{badge "warning badge-raised" "8"}}
+{{/button}}
+{{#button "div" "special btn-lg"}}
+  Go
+  {{#badge "passive"}} {{icons fa.arrow-right}} {{/badge}}
+{{/button}}
+{{#button "div" "warning btn-lg"}}
+  {{icons fa.star}}
+  Favorites
+  {{badge "primary badge-bordered" "13"}}
+{{/button}}
+{{#button "btn" "info btn-lg btn-labeled"}}
+  {{#span class="btn-label"}} {{icons glyph.ok}} {{/span}}
+  Success
+{{/button}}
+  '}}{{.}}{{/styleguide}}
+
+
+
+  {{#styleguide "Buttons and Lables" '
+{{#button "div" "inverse"}}
+  {{label "passive" "Click Here!"}}
+{{/button}}
+{{#button "div" "primary"}}
+  {{label "danger" "Danger"}}
+{{/button}}
+  '}}{{.}}{{/styleguide}}
+
+  {{#styleguide "Block Level Button" '
+{{button "btn" "primary btn-lg btn-block" "Block level button"}}
+{{button "btn" "default btn-lg btn-block" "Block level button"}}
+  '}}{{.}}{{/styleguide}}
+
+{{h3 "Active State"}}
+{{#styleguide "Buttons Element" '
+{{button "btn" "primary btn-lg active" "Primary button"}}
+{{button "btn" "default btn-lg active" "Button"}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Anchor Element" '
+{{button "lnk" "primary btn-lg active" "Primary link" role="button"}}
+{{button "lnk" "default btn-lg active" "Link" role="button"}}
+'}}{{.}}{{/styleguide}}
+
+{{h3 "Disabled State"}}
+{{#styleguide "Disabled Buttons Element" '
+{{button "btn" "primary btn-lg" "Primary button" disabled="disabled"}}
+{{button "btn" "default btn-lg" "Button" disabled="disabled"}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Disabled Anchor Element" '
+{{button "lnk" "primary btn-lg disabled" "Primary link" role="button"}}
+{{button "lnk" "default btn-lg disabled" "Link" role="button"}}
+'}}{{.}}{{/styleguide}}
+
+{{h3 "Stateful Sessions"}}
+{{#styleguide "Stateful" '
+{{#button "btn" "primary load" id="keeda2" data-loading-text="Loading..."}}
+  Loading state
+{{/button}}
+<script>
+    (function($) {
+      $(\'#keeda2\')
+      .click(function () {
+        var btn = $(this)
+        btn.button(\'loading\')
+        setTimeout(function () {
+          btn.button(\'reset\')
+        }, 3000)
+      })
+    })(jQuery);
+  </script>
+'}}{{.}}{{/styleguide}}
+
+{{h3 "Button Dropdowns"}}
+{{#styleguide "Single and Split Button Dropdowns" '
+{{#button "grp"}}
+  {{#button "btn" "warning dropdown-toggle" data-toggle="dropdown"}}
+    Single {{span class="caret"}}
+  {{/button}}
+  {{#ul "dropdown"}}
+    {{#li}} {{a "Action"}} {{/li}}
+    {{#li}} {{a "Another action"}} {{/li}}
+    {{#li}} {{a "Something else here"}} {{/li}}
+    {{li sel="divider"}}
+    {{#li}} {{a "Separated link"}} {{/li}}
+  {{/ul}}
+{{/button}}
+
+{{#button "grp"}}
+  {{button "btn" "info" "Split"}}
+  {{#button "btn" "info dropdown-toggle" data-toggle="dropdown"}}
+    {{span class="caret"}}
+    {{span "Toggle Dropdown" class="sr-only"}}
+  {{/button}}
+  {{#ul "dropdown"}}
+    {{#li}} {{a "Action"}} {{/li}}
+    {{#li}} {{a "Another action"}} {{/li}}
+    {{#li}} {{a "Something else here"}} {{/li}}
+    {{li sel="divider"}}
+    {{#li}} {{a "Separated link"}} {{/li}}
+  {{/ul}}
+{{/button}}
+'}}{{.}}{{/styleguide}}

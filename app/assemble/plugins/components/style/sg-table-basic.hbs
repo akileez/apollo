@@ -1,0 +1,59 @@
+---
+title: "Tables"
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, aspernatur, enim, harum fuga dolor sint corrupti adipisci ipsa similique possimus ea vero porro animi libero corporis voluptates repellendus cupiditate accusantium."
+tags:
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{table}}'}}
+pageSummary: A Handlebars Helper tool for building tables.
+# Page data
+modifier: "table table-striped table-bordered table-hover table-responsive"
+tablehead:
+- thead: ID
+- thead: First
+- thead: Last
+- thead: Git
+tables2:
+- Id: '1'
+  First: "Foo"
+  Last:  "Bar"
+  Git:  "@foo"
+
+- Id: '2'
+  modCell: "warning"
+  First: "John"
+  Last:  "Doe"
+  Git:  "@johndoe"
+  modRow: "success"
+
+- Id: '3'
+  First: "Jane"
+  Last:  "Johnson"
+  Git:  "@jane"
+---
+
+{{#styleguide "Basic Table" '
+{{#prettify}}
+{{#table class=modifier}}
+  {{#thead}}
+    {{#tr}}
+      {{#each tablehead}}
+        {{th thead}}
+      {{/each}}
+    {{/tr}}
+  {{/thead}}
+  {{#tbody}}
+    {{#each tables2}}
+      <tr{{isClass modRow}}>
+      {{!#tr class=(isThis modRow)}}
+        {{td Id}}
+        {{td First}}
+        {{td Last}}
+        {{td Git}}
+      {{!/tr}}
+      </tr>
+    {{/each}}
+  {{/tbody}}
+{{/table}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+

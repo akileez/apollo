@@ -1,0 +1,48 @@
+---
+title: Headings
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, maxime aut iure in perspiciatis sapiente accusamus libero ipsa consequatur repudiandae atque iusto cupiditate unde! Quaerat, molestias quasi quae saepe unde eum distinctio expedita. Dolorum, a corporis accusamus magnam earum non."
+tags: typography
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{h1}}'}}
+pageSummary: A Handlebars Helper tool for marking up headings.
+---
+
+{{#styleguide "Heading Classes" '
+{{#h1 class="tera"}}Heading 1{{/h1}}
+{{#h1 class="giga"}}Heading 2{{/h1}}
+{{#h1 class="mega"}}Heading 3{{/h1}}
+{{#h1 class="alpha"}}Heading 4{{/h1}}
+{{#h1 class="beta"}}Heading 5{{/h1}}
+{{#h1 class="gamma"}}Heading 6{{/h1}}
+{{#h1 class="delta"}}Heading 7{{/h1}}
+{{#h1 class="epsilon"}}Heading 8{{/h1}}
+{{#h1 class="zeta"}}Heading 9{{/h1}}
+{{#h1}}Heading Normal{{/h1}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Headings" '
+{{h1 "Heading level 1"}}
+{{h2 "Heading level 2"}}
+{{h3 "Heading level 3"}}
+{{h4 "Heading level 4"}}
+{{h5 "Heading level 5"}}
+{{h6 "Heading level 6"}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Headings with small text" '
+{{#h1}}Heading 1 {{small "with small text"}}{{/h1}}
+{{#h2}}Heading 2 {{small "with small text"}}{{/h2}}
+{{#h3}}Heading 3 {{small "with small text"}}{{/h3}}
+{{#h4}}Heading 4 {{small "with small text"}}{{/h4}}
+{{#h5}}Heading 5 {{small "with small text"}}{{/h5}}
+{{#h6}}Heading 6 {{small "with small text"}}{{/h6}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Headings with labels" '
+{{#h1}}Heading 1 {{label}}{{/h1}}
+{{#h2}}Heading 2 {{label}}{{/h2}}
+{{#h3}}Heading 3 {{label}}{{/h3}}
+{{#h4}}Heading 4 {{label}}{{/h4}}
+{{#h5}}Heading 5 {{label}}{{/h5}}
+{{#h6}}Heading 6 {{label}}{{/h6}}
+'}}{{.}}{{/styleguide}}

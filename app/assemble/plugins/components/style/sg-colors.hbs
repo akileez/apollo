@@ -1,0 +1,22 @@
+---
+title: Colors
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, dignissimos, nihil, doloremque, ex reprehenderit expedita non iste repudiandae quibusdam magni laudantium nisi dolore eaque atque fugiat! Rerum perferendis ullam quos aliquid eius dolor quas corporis iste error numquam! Ab quibusdam rem labore veniam tenetur sapiente similique tempora architecto exercitationem modi."
+tags: helpers
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{holder}}'}}
+pageSummary: "A Handlebars Helper tool for generating placeholders via holder.js"
+#Colours
+fcolor: fefefe
+prime: "111111"
+second: "935185"
+tertiary: "546231"
+fourth: "5BB345"
+fifth: "2F6F9F"
+---
+{{#styleguide "Base Color Scheme" '
+{{holder bc=prime}}
+{{holder bc=second}}
+{{holder}}
+{{holder bc=fourth}}
+{{holder bc=fifth}}
+'}}{{.}}{{/styleguide}}

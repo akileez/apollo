@@ -1,0 +1,39 @@
+---
+title: Helpers - Truncate
+description: "Using Handlebars Helper truncate with lorem. Truncate in this instance is a block helper show the first 400 characters. Lorem using three paragraphs of data, 10-20 words per sentence, 3-7 sentences per paragraph"
+tags: helper
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{truncate}}'}}
+pageSummary: A Handlebars Helper tool for truncating text blocks.
+---
+
+{{#styleguide "Truncate Block" '
+{{#prettify}}
+  {{#truncate 200}}
+    {{lorem ipsum.paragraphs}}
+  {{/truncate}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Truncate Inline" '
+{{#prettify}}
+  {{truncate 30 "This is some dummy text to show how truncate deals with strings inline."}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+
+{{h4 "The helper code"}}
+{{codeblock "
+  helpers.truncate = function (length, str, options) {
+    options = Array.prototype.pop.call(arguments);
+
+    str = options.fn && options.fn(this) || str || '';
+
+    length = length || 10;
+
+    var append = options.hash.append ? options.hash.append : '…' ;
+
+    if (str.length === length) return str;
+
+    return str.substring(0, length) + append;
+  }
+" "js"}}

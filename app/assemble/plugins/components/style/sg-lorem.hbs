@@ -1,0 +1,80 @@
+---
+title: Helpers - Lorem
+description: "Using Handlebars Helper lorem. Various configuration to inset dummy text for template development"
+tags: helper
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{lorem}}'}}
+pageSummary: A Handlebars Helper tool for generating lorem ipsum text in multiple formats.
+---
+
+{{#h3}}Basic Sentence using lorem {{small "Default. One sentence, 5-15 words each iteration. Repeat 10x's"}} {{/h3}}
+{{#styleguide "Default" '{{#repeat 10}}
+{{lorem ipsum.s0}}
+{{/repeat}}
+'}}{{.}}{{/styleguide}}
+
+{{#h3}}Words using lorem ipsum.words. {{small "One to four words each iteration. Repeat 10x's."}}{{/h3}}
+{{#styleguide "Words" '
+  {{#repeat 10}}
+  {{lorem ipsum.w0}}
+  {{/repeat}}
+'}}{{.}}{{/styleguide}}
+
+{{#h3}}Lead Paragraph &amp; Sentences. {{small "Three sentences, 10-15 words each. Lead using default config"}}{{/h3}}
+{{#styleguide "Lead Paragraph" '
+{{#prettify}}
+  {{#p sel="lead"}}{{lorem}}{{/p}}
+  {{lorem ipsum.s3}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+
+{{#h3}}Default Sentence {{small "One sentence, 5-15 words. Wrapped in p tags"}} {{/h3}}
+{{#styleguide "Sentence Default HTML" '
+{{#prettify}}
+  {{lorem ipsum.s0}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+
+{{#h3}}A Sentence {{small "One sentence, 10-20 words. Wrapped in p tags"}} {{/h3}}
+{{#styleguide "Sentence HTML" '
+{{#prettify}}
+  {{lorem ipsum.s1}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+
+{{#h3}}Two Sentences {{small "Two sentences, 10-20 words each sentence. Wrapped in p tags"}} {{/h3}}
+{{#styleguide "Two Sentences" '
+{{#prettify}}
+  {{lorem ipsum.s2}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+
+{{#h3}}Three Sentences {{small "Three sentences, 10-15 words each sentence. Wrapped in p tags"}} {{/h3}}
+{{#styleguide "Three Sentences" '
+{{#prettify}}
+  {{lorem ipsum.s3}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+
+{{#h3}}A Paragraph {{small "One paragraph, 7-15 words each sentence, 5-9 sentences."}} {{/h3}}
+{{#styleguide "A Paragraph" '
+{{#prettify}}
+  {{lorem ipsum.p1}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+
+{{#h3}}Two Paragraphs {{small "Two paragraphs, 6-13 words each sentence, 4-8 sentences per paragraph"}} {{/h3}}
+{{#styleguide "Two Paragraphs" '
+{{#prettify}}
+  {{lorem ipsum.p2}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+
+{{#h3}}Three Paragraphs {{small "Three paragraphs, 10-20 words per sentence, 3-7 sentences per paragraph"}} {{/h3}}
+{{#styleguide "Three Paragraphs" '
+
+{{#condense}}
+{{lorem ipsum.p3}}
+{{/condense}}
+
+'}}{{.}}{{/styleguide}}

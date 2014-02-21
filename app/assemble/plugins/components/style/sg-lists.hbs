@@ -1,0 +1,86 @@
+---
+title: "Lists"
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla sit corporis fuga dicta inventore dolorem vitae omnis est perferendis laboriosam? Ipsa, ullam, dolore necessitatibus error aliquid eaque est deserunt officiis."
+tags:
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{ul|ol|dl}}'}}
+pageSummary: "A Handlebars Helper tool for creating unordered, ordered and definition lists."
+---
+{{#styleguide "Unordered list" '
+{{#ul}}
+  {{li "Lorem ipsum dolor sit amet"}}
+  {{li "Consectetur adipiscing elit"}}
+  {{#li}}Nulla volutpat aliquam velit
+    {{#ul}}
+      {{li "Phasellus iaculis neque"}}
+      {{li "Purus sodales ultricies"}}
+      {{li "Vestibulum laoreet porttitor sem"}}
+      {{li "Ac tristique libero volutpat at"}}
+    {{/ul}}
+  {{/li}}
+  {{li "Aenean sit amet erat nunc"}}
+  {{li "Eget porttitor lorem"}}
+{{/ul}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Ordered list" '
+{{#ol}}
+  {{li "Lorem ipsum dolor sit amet"}}
+  {{li "Consectetur adipiscing elit"}}
+  {{#li}}Nulla volutpat aliquam velit
+    {{#ul}}
+      {{li "Phasellus iaculis neque"}}
+      {{li "Purus sodales ultricies"}}
+      {{li "Vestibulum laoreet porttitor sem"}}
+      {{li "Ac tristique libero volutpat at"}}
+    {{/ul}}
+  {{/li}}
+  {{li "Aenean sit amet erat nunc"}}
+  {{li "Eget porttitor lorem"}}
+{{/ol}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Unstyled list" '
+{{#ul "nostyle"}}
+  {{li "Lorem ipsum dolor sit amet"}}
+  {{li "Consectetur adipiscing elit"}}
+  {{#li}}Nulla volutpat aliquam velit
+    {{#ul}}
+      {{li "Phasellus iaculis neque"}}
+      {{li "Purus sodales ultricies"}}
+      {{li "Vestibulum laoreet porttitor sem"}}
+      {{li "Ac tristique libero volutpat at"}}
+    {{/ul}}
+  {{/li}}
+  {{li "Aenean sit amet erat nunc"}}
+  {{li "Eget porttitor lorem"}}
+{{/ul}}
+'}}{{.}}{{/styleguide}}
+
+{{h3 "Definition Lists"}}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, sapiente, beatae sit accusantium laudantium officia quae repellat expedita sunt voluptatem magni facilis eius ea ducimus ipsum quibusdam sed natus quod.</p>
+
+{{#styleguide "Definition list" '
+{{#dl}}
+  {{dt "Description lists"}}
+  {{dd "A description list is perfect for defining terms."}}
+  {{dt "Euismod"}}
+  {{dd "Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit."}}
+  {{dd "Donec id elit non mi porta gravida at eget metus."}}
+  {{dt "Malesuada porta"}}
+  {{dd "Etiam porta sem malesuada magna mollis euismod."}}
+{{/dl}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Horizontal definition list" '
+{{#dl class="dl-horizontal"}}
+  {{dt "Description lists"}}
+  {{dd "A description list is perfect for defining terms."}}
+  {{dt "Euismod"}}
+  {{dd "Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit."}}
+  {{dd "Donec id elit non mi porta gravida at eget metus."}}
+  {{dt "Malesuada porta"}}
+  {{dd "Etiam porta sem malesuada magna mollis euismod."}}
+{{/dl}}
+'}}{{.}}{{/styleguide}}
+

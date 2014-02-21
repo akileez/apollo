@@ -1,0 +1,70 @@
+---
+title: Buttons
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, cum, itaque, rem, id sequi est quasi pariatur quidem delectus placeat sed quaerat accusamus veritatis eaque magnam nam iure suscipit illo aperiam vero libero facere nesciunt qui eum dolorum nobis labore alias. Sapiente, aspernatur illo molestiae fuga nam provident ad ipsam?"
+tag: elements
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{button}}'}}
+pageSummary: A Handlebars Helper tool for generating componenet buttons in multiple formats.
+---
+
+{{#styleguide "Buttons - Flat" '
+{{verbose "Standard gray button with gradient"}}
+{{button "btn" "default" "Default"}}
+
+{{verbose "Provides extra visual weight and identifies the primary action in a set of buttons"}}
+{{button "btn" "primary" "Primary"}}
+
+{{verbose "Contextual button for informational alert messages"}}
+{{button "btn" "info" "Info"}}
+
+{{verbose "Contextual button for informational alert messages"}}
+{{button "btn" "special" "Special"}}
+
+{{verbose "Indicates a successful or positive action"}}
+{{button "btn" "success" "Success"}}
+
+{{verbose "Indicates caution should be taken with this action"}}
+{{button "btn" "warning" "Warning"}}
+
+{{verbose "Indicates a dangerous or potentially negative action"}}
+{{button "btn" "danger" "Danger"}}
+
+{{verbose "Deemphasize a button by making it look like a link while maintaining button behavior"}}
+{{button "btn" "link" "Link"}}
+'}}{{.}}{{/styleguide}}
+
+
+    {{#styleguide "Button Tags" '
+{{verbose "Standard button"}}
+{{button "btn" "default" "Button"}}
+
+<!-- Anchor link button -->
+{{button "lnk" "default" "Link"}}
+
+<!-- Input type button -->
+{{button "inp" "default" "Input"}}
+
+<!-- Submit button -->
+{{button "submit" "default" "Submit"}}
+
+<!-- div with class of button to display items -->
+{{#button "div" "default"}}
+  {{icons fa.check }}
+  Div&nbsp;
+  {{badge "inverse badge-raised badge-bordered" "99+"}}
+{{/button}}
+
+<!-- a button group -->
+{{#button "grp"}}
+  {{button "lnk" "default" "Group" href="#keefer1"}}
+  {{button "lnk" "default" "Group" href="#keefer2"}}
+  {{button "lnk" "default" "Group" href="#keefer3"}}
+{{/button}}
+
+<!-- button label -->
+{{#button "btn" "default btn-labeled"}}
+  Label
+  {{#span class="btn-label btn-label-right"}} {{icons glyph.arrow-right}} {{/span}}
+{{/button}}
+    '}}{{.}}{{/styleguide}}
+

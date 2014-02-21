@@ -1,0 +1,61 @@
+---
+title: Helpers - meta
+description: "Creating metadata links for head section."
+collections: helper
+tags: helper
+pageHeader: StyleGuide
+pageHeaderClass:
+pageHeaderDescriptor: helper {{code '{{meta}}'}}
+---
+
+{{#styleguide "metadata links" '
+{{meta "charset"}}
+{{meta "viewport"}}
+{{meta "description" description}}
+{{meta "keywords" keywords}}
+{{meta "author" site.author}}
+{{meta "revised"}}
+{{meta "subject" "your website\'s subject"}}
+{{meta "copyright" site.copyright}}
+{{meta "language" "ES"}}
+{{meta "abstract" "abstract of the site or page"}}
+{{meta "topic" "topic of page"}}
+{{meta "summary" "summary of page"}}
+{{meta "class" "Business"}}
+{{meta "designer" site.author}}
+{{meta "reply" site.email}}
+{{meta "owner" site.owner}}
+{{meta "url" site.domain}}
+{{meta "identURL" site.domain}}
+{{meta "directory" "submission"}}
+{{meta "category" "a category here"}}
+{{meta "coverage" "worldwide"}}
+{{meta "distribution" "Global"}}
+{{meta "rating" "General"}}
+{{meta "revisit" "7 days"}}
+{{meta "httpexpire" "0"}}
+{{meta "httppragma" "no-cache"}}
+{{meta "httpcache" "no-cache"}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "metadata Facebook OpenGraph" '
+{{metaf "type" social.facebook.type}}
+{{metaf "site" social.facebook.site_name}}
+{{metaf "desc" social.facebook.description}}
+{{metaf "url" social.facebook.url}}
+{{metaf "title" title}}
+{{metaf "img" social.facebook.image}}
+{{metaf "fname" site.name.first}}
+{{metaf "lname" site.name.last}}
+{{metaf "email" social.facebook.contact.email}}
+{{metaf "phone" social.facebook.contact.phone}}
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "metadata Twitter Summary Card" '
+{{metat "card"}}
+{{metat "site" social.twitter.twitter_site}}
+{{metat "creator" social.twitter.twitter_creator}}
+{{metat "title" social.twitter.title}}
+{{metat "desc" social.twitter.description}}
+{{metat "img" }}
+'}}{{.}}{{/styleguide}}

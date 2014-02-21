@@ -1,0 +1,109 @@
+---
+title: "Inline Text Elements"
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, unde laborum dolores atque vitae! Tempore, aliquid, nisi, rem, ut dolore ipsam unde dolores optio voluptates ab vero earum ea sed itaque reprehenderit minus quas error quia esse molestiae iste nemo molestias placeat repellendus nostrum ipsum numquam odit quis tempora aliquam."
+tags: elements
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{text}}'}}
+pageSummary: "A Handlebars Helper tool for marking up html text"
+---
+
+{{#styleguide "Links" '
+{{#p}}{{a "This is a text link" class="link"}}{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Strong" '
+{{#p}}{{strong "Strong is used"}} to indicate strong importance{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Emphasis" '
+{{#p}}{{emphasis "This text has added emphasis."}} This text does not.{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Bold" '
+{{#p}}The {{bold "b element"}} is stylistically different text from normal text, without any special importance{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Italics" '
+{{#p}}The {{italics "i element"}} is text that is set off from the normal text{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Underline" '
+{{#p}}The {{underline "u element"}} is text with an unarticulated, though explicitly rendered, non-textual annotation{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Deleted and Inserted" '
+{{#p}}{{delete "This text is deleted"}} and {{insert "This text is inserted"}}{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Strikethrough" '
+{{#p}}{{strikethrough "This text has a strikethrough"}}{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Superscript" '
+{{#p}}Superscript{{superscript "&reg;"}}{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Subscript" '
+{{#p}}Subscript for things like H{{subscript "2"}}O{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Fine Print" '
+{{#p}}{{small "This small text is small for for fine print, etc."}}{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Abbreviation" '
+{{#p}}Abbreviation: {{abbr "HyperText Markup Language" "HTML"}}{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Keyboard" '
+{{#p}}Keyboard input: {{keyboard "Cmd"}}{{/p}}
+{{#p}}Keyboard input: {{keyboard "Q"}}{{keyboard "W"}}{{keyboard "E"}}{{keyboard "R"}}{{keyboard "T"}}{{keyboard "Y"}}{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Inline Quotation" '
+{{#p}}Everytime Kenny is killed, Stan will announce {{quote "http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact" "Oh my God, you/they killed Kenny!"}}.{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Cite or Citation" '
+{{#p}}{{cite "This is a citation"}}{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Definition" '
+{{#p}}The {{definition "dfn element"}} indicates a definition.{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Highlight" '
+{{#p}}The {{highlight "mark element"}}{{nbsp}}indicates a highlight{{/p}}{{symb "curren"}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Code" '
+{{#p}}{{code "This is what inline code looks like."}}{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Sample" '
+{{#p}}{{sample "This is sample output from a computer program"}}{{/p}}
+'}}{{.}}{{/styleguide}}
+
+
+{{#styleguide "Variables" '
+{{#p}}The {{variables "variarble element"}}, such as {{variables "x"}} = {{variables "y"}}{{/p}}
+'}}{{.}}{{/styleguide}}
+

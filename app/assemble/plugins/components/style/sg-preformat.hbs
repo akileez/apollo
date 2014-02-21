@@ -1,0 +1,45 @@
+---
+title: "Code Blocks"
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, aspernatur, enim, harum fuga dolor sint corrupti adipisci ipsa similique possimus ea vero porro animi libero corporis voluptates repellendus cupiditate accusantium."
+tags: base
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{code}}'}}
+pageSummary: A Handlebars Helper tool for marking up code inline and in block format.
+---
+
+{{#styleguide "Preformatted Text" '
+<pre>
+P R E F O R M A T T E D T E X T
+! " # $ % &amp;
+0 1 2 3 4 5 6 7 8 9 : ; &lt; = &gt; ?
+@ A B C D E F G H I J K L M N O
+P Q R S T U V W X Y Z [ \ ] ^ _
+` a b c d e f g h i j k l m n o
+p q r s t u v w x y z { | } ~
+</pre>
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Code and Code Block" '
+<p>Here you can see how we can put code like this: {{code "{{description}}"}} inline</p>
+<p>Below are two examples on how to use code blocks:</p>
+{{codeblock "
+<ul>
+  <li>List item with title: {{title}}</li>
+  <li>List item</li>
+</ul>
+" "html"}}
+{{codeblock "
+alert(\'I am so cool!\');
+" "js"}}
+<p>Now is that cool or what?</p>
+
+'}}{{.}}{{/styleguide}}
+
+{{#styleguide "Styleguide element" '
+{{#prettify}}
+{{#styleguide "Example of styleguide element" "
+This is the inside of styleguide element. You can show off how to use variables here: {{title}} (Yo dawg, I heard you like styleguides..)
+"}}{{.}}{{/styleguide}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+

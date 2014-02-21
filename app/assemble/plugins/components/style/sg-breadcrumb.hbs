@@ -1,0 +1,24 @@
+---
+title: Breadcrumb
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, iste, debitis eligendi expedita tempora necessitatibus consectetur incidunt consequuntur quia pariatur culpa sunt harum repellat doloribus."
+tag: elements
+pageHeader: Styleguide
+pageHeaderClass:
+pageHeaderDescriptor: helper {{code '{{breadcrumb}}'}}
+pageSummary: "A Handlebars Helper tool for creating a Bootstrap flavored breadcrumb"
+---
+{{#styleguide "Breadcrumb" '
+{{#prettify}}
+{{#ul class="breadcrumb"}}
+  {{#li}}{{a "Home" href="/index.html" class="link"}}{{/li}}
+  {{#if navSection}}
+    {{li navSection}}
+  {{/if}}
+  {{#if navSubSection}}
+    {{li navSubSection}}
+  {{/if}}
+  {{li navTitle class="active"}}
+{{/ul}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+

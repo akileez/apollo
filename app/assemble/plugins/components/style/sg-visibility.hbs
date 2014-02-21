@@ -1,0 +1,18 @@
+---
+title: Element Visibility
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, dignissimos, nihil, doloremque, ex reprehenderit expedita non iste repudiandae quibusdam magni laudantium nisi dolore eaque atque fugiat! Rerum perferendis ullam quos aliquid eius dolor quas corporis iste error numquam! Ab quibusdam rem labore veniam tenetur sapiente similique tempora architecto exercitationem modi."
+---
+
+{{#styleguide "Visibility" '
+{{p "This text is hidden on smaller screens" class="hidden-sm"}}
+
+{{#p class="visible-sm"}}{{code "This text is only visible on smaller screens"}}{{/p}}
+
+{{p "This text is hidden on medium screens only" class="hidden-md"}}
+
+{{#p class="visible-md"}}{{code "This text is only visible on medium screens"}}{{/p}}
+
+{{p "This text is hidden on large screens" class="hidden-lg"}}
+
+{{#p class="visible-lg"}}{{code "This text is only visible on large screens"}}{{/p}}
+'}}{{.}}{{/styleguide}}

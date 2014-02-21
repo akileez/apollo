@@ -1,0 +1,31 @@
+---
+title: Isotope
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, cum, itaque, rem, id sequi est quasi pariatur quidem delectus placeat sed quaerat accusamus veritatis eaque magnam nam iure suscipit illo aperiam vero libero facere nesciunt qui eum dolorum nobis labore alias. Sapiente, aspernatur illo molestiae fuga nam provident ad ipsam?"
+tag: elements
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{ul}}'}}
+pageSummary: A Handlebars Helper tool for generating unordered lists.
+---
+{{#styleguide "Isotope Menu" '
+{{#ul id="filters" class="social-bookmarks"}}
+  {{#li}}
+    {{#a href="#" data-filter="*"}}{{icons fa.comment}}&nbsp;Show All&nbsp;{{/a}}
+    {{#span class="divider"}}&nbsp;|&nbsp;{{/span}}
+  {{/li}}
+  {{#li}}
+    {{#a href="#" data-filter=".featured"}}{{icons fa.star}}&nbsp;Featured&nbsp;{{/a}}
+    {{#span class="divider"}}&nbsp;|&nbsp;{{/span}}
+  {{/li}}
+  {{#li}}
+    {{#a href="#" data-filter=".new"}}{{icons glyph.user}}&nbsp;New&nbsp;{{/a}}
+    {{#span class="divider"}}&nbsp;|&nbsp;{{/span}}
+  {{/li}}
+  {{#li}}
+    {{#a href="#" data-filter=".video"}}{{icons fa.play}}&nbsp;Videos&nbsp;{{/a}}
+    {{#span class="divider"}}&nbsp;|&nbsp;{{/span}}
+   {{/li}}
+  {{#li}}
+    {{#a href="#" data-filter=".pictures"}}{{icons fa.picture-o}}&nbsp;Pictures{{/a}}
+  {{/li}}
+{{/ul}}
+'}}{{.}}{{/styleguide}}

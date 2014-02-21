@@ -1,0 +1,24 @@
+---
+title: Alerts
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, dignissimos, nihil, doloremque, ex reprehenderit expedita non iste repudiandae quibusdam magni laudantium nisi dolore eaque atque fugiat! Rerum perferendis ullam quos aliquid eius dolor quas corporis iste error numquam! Ab quibusdam rem labore veniam tenetur sapiente similique tempora architecto exercitationem modi."
+tag: elements
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{alert}}'}}
+pageSummary: "A Handlebars Helper tool for creating alerts"
+---
+{{#styleguide "Alerts" '
+{{alert "success" "One more time for the Gipper." id="Keith"}}
+
+{{#alert "danger alert-bordered alert-raised"}}
+  {{button "cls" "alert"}}
+  {{strong "This is only a test."}} Do not pass go. Do not collect 200 dollars.
+{{/alert}}
+
+{{#alert "info alert-raised fade in" close=true}}
+{{strong "This is only a test."}} Do not pass go. Do not collect 200 dollars.
+{{/alert}}
+
+{{alert "info alert-raised fade in" "One more time for the Gipper." close=true}}
+
+{{alert "warning" "This is another test." }}
+'}}{{.}}{{/styleguide}}

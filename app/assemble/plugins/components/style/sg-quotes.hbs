@@ -1,0 +1,20 @@
+---
+title: "Quotes"
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, aspernatur, enim, harum fuga dolor sint corrupti adipisci ipsa similique possimus ea vero porro animi libero corporis voluptates repellendus cupiditate accusantium."
+tags:
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{blockquote}}'}}
+pageSummary: "A Handlebars Helper tool for creating Bootstrap and other blockquotes"
+---
+{{#styleguide "Blockquote" '
+{{#blockquote}}
+  {{p "Far out in the uncharted backwaters of the unfashionable end of the Western Spiral arm of the Galaxy lies a small unregarded yellow sun."}}
+  {{#small}}Douglas Adams in {{cite "The Hitchhiker\'s Guide to the Galaxy" title="Source Title" }}{{/small}}
+{{/blockquote}}
+
+<blockquote class="pull-right">
+  <p>Far out in the uncharted backwaters of the unfashionable end of the Western Spiral arm of the Galaxy lies a small unregarded yellow sun.</p>
+  <small>Douglas Adams in <cite title="Source Title">The Hitchhiker\'s Guide to the Galaxy</cite></small>
+</blockquote>
+'}}{{.}}{{/styleguide}}
+

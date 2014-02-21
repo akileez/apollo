@@ -1,0 +1,23 @@
+---
+title: Address
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, dignissimos, nihil, doloremque, ex reprehenderit expedita non iste repudiandae quibusdam magni laudantium nisi dolore eaque atque fugiat! Rerum perferendis ullam quos aliquid eius dolor quas corporis iste error numquam! Ab quibusdam rem labore veniam tenetur sapiente similique tempora architecto exercitationem modi."
+tag: elements
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{address}}'}}
+pageSummary: "A Handlebars Helper tool for marking up html text"
+---
+
+{{#styleguide "Address" '
+{{#address}}
+  {{strong "Company Name, Inc."}}{{br}}
+  811 7th Ave, Suite 700{{br}}
+  Manhattan, NY 10019{{br}}
+  {{abbr "Phone" "P:"}} (487) 487-4874
+{{/address}}
+
+{{#address}}
+  {{strong "Full Name"}}{{br}}
+  {{a "first.last@example.com" href="mailto:#"}}
+{{/address}}
+'}}{{.}}{{/styleguide}}
+

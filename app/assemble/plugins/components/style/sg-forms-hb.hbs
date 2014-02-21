@@ -1,0 +1,33 @@
+---
+title: Forms - Handlebars.js
+description: "Using Handlebars.js totally to create this block of code which is rendered below. All bootstrap formatting is encapsulated within the individual helpers."
+tags: base
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{form}}'}}
+pageSummary: "A Handlebars Helper tool for creating Bootstrap forms."
+marketing:
+ - { value: One, text: "Please Select One" }
+ - { value: Two, text: "#base2" }
+ - { value: Twee, text: "#base3"}
+ - { value: Four, text: "#base4"}
+ - { value: Five, text: "#base5"}
+---
+{{#styleguide "Form Base" '
+{{#prettify}}
+{{#panel}}
+{{#panel "body"}}
+{{#form "email.php" id="contactForm"}}
+  {{form_legend "Contact Form" "Testing out content delivery through form helpers"}}
+  {{form_input "text" "name" "Name" "First Last Name"}}
+  {{form_input "email" "email" "Email" "your@email.com"}}
+  {{form_input "tel" "phone" "Phone Number" "(123) 456-7890"}}
+  {{form_textarea "mess" "Message" "Type" "5"}}
+  {{form_selects "marketing" "How did you hear about us" marketing ""}}
+  {{form_checkbox "chk" "checkbox" "1" false false "Newsletter?"}}
+  {{form_fileupload "files" "Upload a file"}}
+  {{form_actions "both"}}
+{{/form}}
+{{/panel}}
+{{/panel}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
