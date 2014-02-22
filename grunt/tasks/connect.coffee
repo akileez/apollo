@@ -2,10 +2,10 @@ module.exports =
   build:
     options:
       port: 9000
-      hostname: '*'
+      host: '*'
       base: "<%= dir.build %>"
   dist:
     options:
       port: 9001
-      hostname: '*'
+      host: '*'
       base: "<%= dir.dist %>"
