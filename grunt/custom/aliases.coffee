@@ -163,19 +163,19 @@ module.exports = (grunt) ->
   # --------------------------------------------------------------------------------
   alias 'fixtheme'    , 'Some task description here.', [
     "autoprefixer:theme"
-    "recess:theme"
+    "shell:combtheme"
   ]
   alias 'fixvendor'    , 'Some task description here.', [
     "autoprefixer:vendor"
-    "recess:vendor"
+    "shell:combvendor"
   ]
   alias 'fixbootstrap'    , 'Some task description here.', [
     "autoprefixer:bootstrap"
-    "recess:bootstrap"
+    "shell:combbootstrap"
   ]
   alias 'fixstyles'    , 'Some task description here.', [
     "autoprefixer:build"
-    "recess:build"
+    "shell:combbuild"
   ]
 
   # HTML inspection and validation
