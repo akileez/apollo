@@ -1,0 +1,70 @@
+---
+title: Accordion
+description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, minima aut itaque eaque amet optio magnam! Incidunt, neque, non, rem repudiandae nemo dolores perspiciatis officia rerum adipisci doloremque dolorem illum est saepe et ipsa magni perferendis. Iste, mollitia, labore, explicabo, placeat maxime delectus minus exercitationem id officia itaque sint repellendus!"
+tags: components
+pageHeader: Styleguide
+pageHeaderDescriptor: helper {{code '{{accordion}}'}}
+pageSummary: "Handlebars helper for generating a Bootstrap accordion"
+sample:
+  accordion:
+  - context: "disabled"
+    childId: "qOne"
+    heading: true
+    panel_title: "Are we there yet?"
+    panel_content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+
+  - context: "disabled"
+    childId: "qTwo"
+    heading: true
+    panel_title: "What is your name"
+    panel_content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+
+  - context: "disabled"
+    childId: "qThree"
+    heading: true
+    panel_title: "Are you a boy or girl"
+    panel_content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+
+  - context: "disabled"
+    childId: "qFour"
+    heading: true
+    panel_title: "This is fun"
+    panel_content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+
+  - context: "disabled"
+    childId: "qFive"
+    heading: true
+    panel_title: "Done yet?"
+    panel_content: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>"
+---
+
+{{#styleguide "Accordion" '
+{{#prettify}}
+{{partial "accordion" sample parentId="tester" context="success"}}
+{{/prettify}}
+'}}{{.}}{{/styleguide}}
+
+{{p "This is the accordion partial which is called above"}}
+{{#codeblock '
+---
+parentId: "accordion-test"
+context: disabled
+---
+{{! This is the new way to handle looping instead of the above}}
+{{#accordion parent=parentId}}
+  {{#each accordion}}
+    {{#panel ../../context}}
+      {{#accordion "head" parent=../../../parentId child=childId}}
+        {{#if panel_heading}}
+        {{h4 panel_heading}}
+        {{else}}
+        {{strong panel_title}}
+        {{/if}}
+      {{/accordion}}
+      {{#accordion "body" child=childId}}
+        {{{panel_content}}}
+      {{/accordion}}
+    {{/panel}}
+  {{/each}}
+{{/accordion}}
+' 'handlebars'}}{{.}}{{/codeblock}}
