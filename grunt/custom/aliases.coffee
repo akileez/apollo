@@ -159,7 +159,7 @@ module.exports = (grunt) ->
     "merge-json:project"
   ]
 
-  # CSS Lints: Autoprefixer and Recess
+  # CSS Lints: Autoprefixer and Csscomb
   # --------------------------------------------------------------------------------
   alias 'fixtheme'    , 'Some task description here.', [
     "autoprefixer:theme"
