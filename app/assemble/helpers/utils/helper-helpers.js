@@ -40,6 +40,9 @@ module.exports.register = function(Handlebars, options, params) {
     return new Handlebars.SafeString(template(context));
   };
 
+  // condensed version of handlebars-helper-aggregate
+  // https://github.com/helpers/handlebars-helper-aggregate
+  // inspired by handlebars-helpers-compose
   helpers.composite = function (src, ctx, opts) {
     var pageObj, metadata, content, context, template;
 
@@ -55,6 +58,9 @@ module.exports.register = function(Handlebars, options, params) {
     return new Handlebars.SafeString(template(context));
   };
 
+  // condensed version of handlebars-helper-compose
+  // https://github.com/helpers/handlebars-helper-compose
+  // inspired by handlebars-helpers-compose
   helpers.arrange = function (src, ctx, opts) {
     var pageObj, metadata, content, context, data, template, output;
     // var i = 0;
@@ -79,6 +85,8 @@ module.exports.register = function(Handlebars, options, params) {
     return new Handlebars.SafeString(output);
   }
 
+  // condensed version of handlebars-helper-partial
+  // https://github.com/helpers/handlebars-helper-partial
   helpers.partial = function (src, ctx, opts) {
     var filepath, pageObj, metadata, context, template, fn;
 
