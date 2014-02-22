@@ -159,7 +159,7 @@ module.exports = (grunt) ->
     "merge-json:project"
   ]
 
-  # CSS Lints: Autoprefixer and Csscomb
+  # CSS Lints: Autoprefixer and Recess
   # --------------------------------------------------------------------------------
   alias 'fixtheme'    , 'Some task description here.', [
     "autoprefixer:theme"
@@ -193,6 +193,15 @@ module.exports = (grunt) ->
     "sitemap"
   ]
 
+  # Modernizr builds
+  # --------------------------------------------------------------------------------
+  alias 'modbuild' , 'Build modernizr file during development', [
+    "modernizr:dev"
+  ]
+  alias 'moddist' , 'Build modernizr file for production', [
+    "modernizr:dist"
+  ]
+
   # Production Preparation Stage
   # --------------------------------------------------------------------------------
   alias 'testprep'   , 'Some task description here.', [
@@ -210,6 +219,7 @@ module.exports = (grunt) ->
     "cson"
     "less:compile"
     "fixstyles"
+    "moddist"
     "cssmin:build"
     "concat:buildscripts"
     "uglify:scripts"
