@@ -35,6 +35,7 @@ Replaced following grunt tasks with command line equivalents executed via grunt-
 * grunt-htmlinspector (node htmlinspector)  
 * grunt-contrib-compress (gzip)  
 * grunt-rename (mv)  
+* grunt-uncss (node uncss)
 * grunt-csscomb (node csscomb)
 * grunt-contrib-imagemin (various command line tools -- need to document)
 
