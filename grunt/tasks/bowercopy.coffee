@@ -20,10 +20,10 @@ module.exports =
     options:
       runbower: false
     files:
-      '<%= dir.jsplugins %>/fittext.js'   : 'FitText.js/jquery.fittext.js'
-      '<%= dir.jsplugins %>/nod.js'       : 'jquery-nod/nod.js'
-      '<%= dir.jsplugins %>/easing.js'    : 'jquery.easing/js/jquery.easing.js'
-      '<%= dir.jsplugins %>/scrollup.js'  : 'scrollup/js/jquery.scrollUp.js'
+      '<%= dir.jsdev %>/plugins/fittext.js'   : 'FitText.js/jquery.fittext.js'
+      '<%= dir.jsdev %>/plugins/nod.js'       : 'jquery-nod/nod.js'
+      '<%= dir.jsdev %>/plugins/easing.js'    : 'jquery.easing/js/jquery.easing.js'
+      '<%= dir.jsdev %>/plugins/scrollup.js'  : 'scrollup/js/jquery.scrollUp.js'
 
   bootstrap:
     options:
@@ -51,7 +51,7 @@ module.exports =
     files:
       # Flexslider
       '<%= dir.less %>/vendor/flexslider/flexslider.less' : 'flexslider/flexslider.css'
-      '<%= dir.jsplugins %>/flexslider.js'                : 'flexslider/jquery.flexslider.js'
+      '<%= dir.jsdev %>/plugins/flexslider.js'                : 'flexslider/jquery.flexslider.js'
       '<%= dir.font %>'                                   : 'flexslider/fonts'
 
   greensock:
@@ -110,3 +110,7 @@ module.exports =
       # '<%= dir.font %>/fuelux-preloader.woff'           : 'fuelux/src/fonts/fuelux-preloader.woff'
       # FuelUX images
       # '<%= dir.img %>/fuelux/form.png'                   : 'fuelux/src/img/form.png'
+
+
+
+
