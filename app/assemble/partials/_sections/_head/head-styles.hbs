@@ -1,7 +1,7 @@
 {{verbose "Fonts"}}
-  {{#is buildstage "not" "test"}}
-    {{webfont fonts.collection.production}}
-  {{/is}}
+  {{! Use fonts.cson located in app/assemble/config/support to create additonal
+  sets of font collections. Or use this helper for individual font famailies}}
+  {{webfont fonts.collection.production}}
   {{! -----------------------------------------------------------------------}}
 {{verbose "CSS Base"}}
   {{#is buildenv "development"}}
@@ -25,26 +25,19 @@
     {{css css.styles-min}}
   {{/is}}
   {{! -----------------------------------------------------------------------}}
-{{verbose "Page Views"}}
-  {{#is buildstage "not" "test"}}
-    {{! Production Section ---------------------------}}
-    {{verbose "Automated file loading per page view" 2}}
-      {{#is styleFiles}}
-        {{#process}}
-          {{css styleFiles}}
-        {{/process}}
-      {{/is}}
-    {{verbose "Mapbox Testing" 2}}
-      {{! set up for specific pages}}
-      {{#is page.slug map.views-location.notInUse}}
-      <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
-      {{/is}}
-    {{! Development Section --------------------------}}
-    {{#is buildenv "development"}}
-      {{#devopts.styleguide}}
-        {{css css.prettify}}
-        {{!css css.github}}
-      {{/devopts.styleguide}}
+{{verbose "Page Views" 2}}
+  {{! Production Section ---------------------------}}
+  {{verbose "Automated file loading per page view" 2}}
+    {{#is styleFiles}}
+      {{#process}}
+        {{css styleFiles}}
+      {{/process}}
     {{/is}}
+  {{! Development Section --------------------------}}
+  {{#is buildenv "development"}}
+    {{#devopts.styleguide}}
+      {{css css.prettify}}
+      {{!css css.github}}
+    {{/devopts.styleguide}}
   {{/is}}
   {{! -----------------------------------------------------------------------}}
