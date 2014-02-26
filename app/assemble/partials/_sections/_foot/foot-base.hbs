@@ -5,13 +5,3 @@
     {{/process}}
   {{/is}}
   {{! -----------------------------------------------------------------------}}
-{{verbose "Google Maps Sensor and Init: Files for Production" 2}}
-  {{#is page.slug  map.views-contact.slug}}
-    <script src="http://maps.google.com/maps/api/js?v=3&sensor=false&libraries=places"></script>
-    {{codesnippet js.snippet-googlemaps}}
-  {{/is}}
-  {{! -----------------------------------------------------------------------}}
-{{verbose "Scrollspy: Files for Production" 2}}
-  {{#is page.slug  map.styleguide-index.slug}}
-    {{codesnippet js.snippet-scrollspy}}
-  {{/is}}
