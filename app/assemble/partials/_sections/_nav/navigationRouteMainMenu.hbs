@@ -1,5 +1,9 @@
-{{verbose 'Navigation Links' 2}}
+{{verbose 'Navigation Links: Production' 2}}
   {{#is navigation 'nlinks01'}}
+    {{! -----------------------------------------------------------------------}}
+  {{/is}}
+{{verbose 'Navigation Links: Demo' 2}}
+  {{#is navigation 'demo'}}
     {{!include '_navlink' route="home"}}
     {{#is buildenv 'development'}}
       {{#devopts.styleguide}}
