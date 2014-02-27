@@ -8,7 +8,6 @@ module.exports =
       '<%= dir.jsdev %>/helium.js'              : 'helium-css/helium.js'
       '<%= dir.jsdev %>/html-inspector.js'      : 'html-inspector/dist/html-inspector.js'
       '<%= dir.jsdev %>/prettify.js'            : 'google-code-prettify/src/prettify.js'
-      '<%= dir.css %>/development/prettify.css' : 'google-code-prettify/src/prettify.css'
 
   JQuery:
     options:
