@@ -89,6 +89,12 @@ module.exports =
       stderr: true
     command: 'csscomb -v -c grunt/config/csscomb.json <%= dir.css %>/styles.css'
 
+  uncss:
+    options:
+      stdout: true
+      stderr: true
+    command: 'uncss -s <%= css %>/styles.css <%= build %>/**/*.html > <%= css %>/clean.css'
+
   # Rsync - ssh to inhouse development machines for testing web pages
   # replaces grunt-rsync
   deploystage:
