@@ -22,9 +22,9 @@
   coffee     : '<%= dir.scripts %>/coffee'
   js         : '<%= dir.scripts %>/js'
   jsdev      : '<%= dir.js %>/development'
-  jsprod     : '<%= dir.js %>/_prod'
-  jquery     : '<%= dir.js %>/jquery'
-  jsviews    : '<%= dir.js %>/views'
+  jsprod     : '<%= dir.js %>/production'
+  jquery     : '<%= dir.jsprod %>/jquery'
+  jsviews    : '<%= dir.jsprod %>/views'
   jsvendor   : '<%= dir.jsviews %>/vendor'
   jsboot     : '<%= dir.jquery %>/bootstrap'
   jsplugins  : '<%= dir.jquery %>/plugins'
@@ -38,38 +38,33 @@
   php        : '<%= dir.static %>/php'
   # Configuration Files
   config     : '<%= dir.assemble %>/config'
-  json       : '<%= dir.assemble %>/data'
-  cson       : '<%= dir.config %>'
+  json       : '<%= dir.config %>/json'
+  cson       : '<%= dir.config %>/cson'
   yaml       : '<%= dir.config %>'
   # Assemble Options
-  # folder name changes for listings
-  # componenet --> includes
-  # modules    --> plugins
-  # layouts    --> _layouts
-  # sections   --> _sections
   assets     : '<%= dir.build %>/assets'
-  helpers    : '<%= dir.assemble %>/helpers'
-  modules    : '<%= dir.assemble %>/plugins'
-  partials   : '<%= dir.assemble %>/partials'
+  helpers    : '<%= dir.assemble %>/extensions/helpers'
+  plugins    : '<%= dir.assemble %>/extensions/plugins'
+  modules    : '<%= dir.assemble %>/modules'
+  partials   : '<%= dir.assemble %>/includes'
   templates  : '<%= dir.assemble %>/templates'
   layouts    : '<%= dir.partials %>/_layouts'
   sections   : '<%= dir.partials %>/_sections'
-  components : '<%= dir.partials %>/includes'
-  bricks     : '<%= dir.components %>/bricks'
-  blocks     : '<%= dir.components %>/blocks'
-  cubes      : '<%= dir.components %>/cubes'
+  base       : '<%= dir.partials %>/base'
+  blocks     : '<%= dir.partials %>/blocks'
+  bricks     : '<%= dir.partials %>/bricks'
   # Assemble Core Files
+  admin      : '<%= dir.templates %>/admin'
+  error      : '<%= dir.admin %>/error'
+  styleguide : '<%= dir.admin %>/styleguide'
+  site       : '<%= dir.admin %>/site'
+  sitemap    : '<%= dir.admin %>/sitemap'
   markdown   : '<%= dir.modules %>/content/markdown'
   blog       : '<%= dir.templates %>/blog'
-  error      : '<%= dir.templates %>/error'
-  styleguide : '<%= dir.templates %>/styleguide'
-  site       : '<%= dir.templates %>/site'
-  sitemap    : '<%= dir.templates %>/sitemap'
   views      : '<%= dir.templates %>/views'
   articles   : '<%= dir.views %>/articles'
   docs       : '<%= dir.views %>/docs'
   # Misc
   readme     : '<%= dir.tmp %>/readme'
-
 
 }

@@ -5,8 +5,10 @@ module.exports =
     data:       '<%= dir.json %>/**/*.{json,ymal}'
     assets:     '<%= dir.assets %>'
     partials:   [
-      '<%= dir.components %>/**/*.{html,hbs}'
       '<%= dir.sections %>/**/*.{html,hbs}'
+      '<%= dir.base %>/*.{html,hbs}'
+      '<%= dir.blocks %>/*.{html,hbs}'
+      '<%= dir.bricks %>/*.{html,hbs}'
     ]
     layoutdir:  '<%= dir.layouts %>'
     layoutext:  '.hbs'
@@ -221,7 +223,7 @@ module.exports =
   # -----------------------------------------------------------------------------
   blog:
     options:
-      plugins:    ['assemble-contrib-permalinks']
+      plugins:    ['<%= dir.plugins %>/**/*.js']
 
       # // Permalinks
       permalinks:
@@ -260,7 +262,7 @@ module.exports =
   # -----------------------------------------------------------------------------
   posts:
     options:
-      plugins:    ['assemble-contrib-permalinks']
+      plugins:    ['<%= dir.plugins %>/**/*.js']
 
       # // Permalinks
       permalinks:
