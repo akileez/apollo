@@ -13,6 +13,19 @@ module.exports =
       stdout: true
     command: 'changelog akileez/HTML5-Handlebars -m all > CHANGELOG.md'
 
+  # replaces grunt-rename
+  # Moving js files from development to production. Per file basis.
+  jsmove:
+    options:
+      stdout: true
+      stderr: true
+      execOptions:
+        cwd: 'app/scripts/js'
+    command: (dir, file) ->
+      src = "development/"
+      dest = "production/"
+      "mv " + src + dir + "/" + file + " " + dest + dir + "/" + file
+
   # Radical! gzip files in distribution directory
   # replaces grunt-compress
   compress:
