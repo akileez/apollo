@@ -158,6 +158,14 @@ module.exports = (grunt) ->
     "tree-src"
     "merge-json:project"
   ]
+  alias 'syncjs'     , 'sync js directory', [
+    "tree:js"
+    "shell:syncjs"
+  ]
+  alias 'synccss'     , 'sync css directory', [
+    "tree:css"
+    "shell:synccss"
+  ]
 
   # CSS Lints: Autoprefixer and Csscomb
   # --------------------------------------------------------------------------------
