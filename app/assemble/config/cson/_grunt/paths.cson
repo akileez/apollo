@@ -56,11 +56,11 @@
   # Assemble Core Files
   admin      : '<%= dir.templates %>/admin'
   error      : '<%= dir.admin %>/error'
-  styleguide : '<%= dir.admin %>/styleguide'
   site       : '<%= dir.admin %>/site'
   sitemap    : '<%= dir.admin %>/sitemap'
   markdown   : '<%= dir.modules %>/content/markdown'
   blog       : '<%= dir.templates %>/blog'
+  styleguide : '<%= dir.templates %>/styleguide'
   views      : '<%= dir.templates %>/views'
   articles   : '<%= dir.views %>/articles'
   docs       : '<%= dir.views %>/docs'
