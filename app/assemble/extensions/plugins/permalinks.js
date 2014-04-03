@@ -15,7 +15,7 @@ var moment = require('moment');
 var frep   = require('frep');
 
 // Local utils
-var Utils  = require('../lib/permalinkUtils');
+var Utils  = require('lib/permalinkUtils');
 
 /**
  * Permalinks Plugin
