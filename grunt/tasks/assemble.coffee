@@ -223,7 +223,7 @@ module.exports =
   # -----------------------------------------------------------------------------
   blog:
     options:
-      plugins:    ['<%= dir.plugins %>/**/*.js']
+      plugins:    ['<%= dir.plugins %>/permalinks']
 
       # // Permalinks
       permalinks:
@@ -262,7 +262,7 @@ module.exports =
   # -----------------------------------------------------------------------------
   posts:
     options:
-      plugins:    ['<%= dir.plugins %>/**/*.js']
+      plugins:    ['<%= dir.plugins %>/permalinks']
 
       # // Permalinks
       permalinks:
