@@ -22,7 +22,7 @@ module.exports =
       ext: '.css'
     ,
       expand: true
-      cwd: '<%= dir.less %>'
+      cwd: '<%= dir.less %>/bootstrap'
       src: ['_bs-*.less']
       dest: '<%= dir.css %>'
       ext: '.css'
