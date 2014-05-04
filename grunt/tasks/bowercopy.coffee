@@ -28,9 +28,9 @@ module.exports =
     options:
       runbower: false
     files:
-      '<%= dir.less %>/bootstrap'                    : 'bootstrap/less'
+      '<%= dir.less %>/bootstrap/core'                    : 'bootstrap/less'
       # Jasny Bootstrap
-      '<%= dir.less %>/bootstrap/button-labels.less' : 'bootstrap-jasny/less/button-labels.less'
+      '<%= dir.less %>/bootstrap/core/button-labels.less' : 'bootstrap-jasny/less/button-labels.less'
       # Bootstrap Javascripts
       '<%= dir.jsprod %>/jquery/bootstrap'               : 'bootstrap/js'
       # Glyphicons
