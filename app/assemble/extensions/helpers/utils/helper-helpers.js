@@ -142,6 +142,12 @@ module.exports.register = function(Handlebars, options, params) {
     return new Handlebars.SafeString(template(context));
   };
 
+  helpers.inline = function (file) {
+    file = options.compose.cwd + file;
+    var inline = matter.read(file);
+    return new Handlebars.SafeString(inline.content);
+  }
+
   for(var index in helpers){
     Handlebars.registerHelper(index, helpers[index]);
   }
