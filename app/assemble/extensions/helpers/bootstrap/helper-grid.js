@@ -10,7 +10,7 @@ module.exports.register = function(Handlebars, options) {
 
     if (options.hash.push) {
       push = options.hash.push;
-      element = createElement(div, true, extend({
+      element = createElement('div', true, extend({
         class: 'col-' + size + '-' + col + ' col-' + size + '-push-' + push
       }, options.hash), body);
       return options.fn ? element : new Handlebars.SafeString(element);
@@ -18,7 +18,7 @@ module.exports.register = function(Handlebars, options) {
 
     if (options.hash.pull) {
       pull = options.hash.pull;
-      element = createElement(div, true, extend({
+      element = createElement('div', true, extend({
         class: 'col-' + size + '-' + col + ' col-' + size + '-pull-' + pull
       }, options.hash), body);
       return options.fn ? element : new Handlebars.SafeString(element);
@@ -26,13 +26,13 @@ module.exports.register = function(Handlebars, options) {
 
     if (options.hash.offset) {
       offset = options.hash.offset;
-      element = createElement(div, true, extend({
+      element = createElement('div', true, extend({
         class: 'col-' + size + '-' + col + ' col-' + size + '-offset-' + offset
       }, options.hash), body);
       return options.fn ? element : new Handlebars.SafeString(element);
     }
 
-    element = createElement(div, true, extend({class: 'col-' + size + '-' + col}, options.hash), body);
+    element = createElement('div', true, extend({class: 'col-' + size + '-' + col}, options.hash), body);
     return options.fn ? element : new Handlebars.SafeString(element);
   };
 
