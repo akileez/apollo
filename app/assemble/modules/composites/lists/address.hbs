@@ -13,17 +13,3 @@
   {{a mailTo href=(isThat mailTo "mailto:")}}
 {{/address}}
 {{/is}}
-
-{{#draft}}
-{{#address}}
- {{strong Company}} {{br}}
- {{Address}} {{br}}
- {{Location}} {{br}}
- {{/address}}
-
- {{#address}}
-   {{strong Contact}} {{br}}
-   {{abbr 'Phone' "P:"}} {{formatPhone Phone}} {{br}}
-   {{a Email href=(isThat Email "mailto:")}} {{br}}
- {{/address}}
- {{/draft}}

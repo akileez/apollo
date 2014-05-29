@@ -1,0 +1,40 @@
+---
+# call via {{partial}} or {{include}} helpers:
+# partial helper will use YFM, include helper will disregard YFM
+# {{partial 'partialName' file.mediakey option='something' opsOther='somethingelse'}}
+media             : # json file where data located
+mediaLink         : # true or false
+mediaObject       : # data to be inserted
+mediaHeading      : # heading for media
+mediaContent      : # content for media
+---
+{{#media}}
+  {{#each object}}
+    {{! media object}}
+    {{#is mediaIMG}}
+      {{! media link check}}
+      {{!--<a class="pull-left" href="{{relPath page.dest pageDest}}">--}}
+      {{#a class="pull-left" href=(relPath page.dest pageDest)}}
+        {{#process}}
+          {{img mediaIMG class="media-object" width="50" height="50" alt=mediaAlt}}
+        {{/process}}
+      {{/a}}
+    {{else}}
+      {{#div class="pull-left"}}
+        {{div mediaObject class="media-object"}}
+      {{/div}}
+    {{/is}}
+
+    {{#media "body"}}
+      {{! media heading}}
+      {{#is mediaLink}}
+        {{#a href=(relPath page.dest pageDest)}} {{#h4 class="media-heading link"}} {{mediaLink}} {{/h4}} {{/a}}
+        {{!--<a href="{{relPath page.dest pageDest}}"> {{#h4 class="media-heading link"}} {{mediaLink}} {{/h4}}</a>--}}
+      {{else}}
+        {{#h4 class="media-heading"}} {{mediaHeading}} {{/h4}}
+      {{/is}}
+      {{! media body}}
+      {{#p}}{{mediaContent}}{{/p}}
+    {{/media}}
+  {{/each}}
+{{/media}}
