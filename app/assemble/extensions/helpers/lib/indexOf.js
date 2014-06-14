@@ -1,4 +1,4 @@
-function indexOf(arr, find) {
+module.exports = function(arr, find) {
   for(var i = 0, j = arr.length; i < j; i++) {
     if (arr[i] === find) {
       return i;
@@ -6,5 +6,3 @@ function indexOf(arr, find) {
   }
   return -1;
 }
-
-module.exports = exports = indexOf;
