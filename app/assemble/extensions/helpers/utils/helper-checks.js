@@ -89,6 +89,14 @@ module.exports.register = function(Handlebars, options) {
     return new Handlebars.SafeString(setId);
   };
 
+  helpers.isScrollspy = function (a, options) {
+    var scroll = '';
+    if (a) {
+      scroll = ' data-spy="scroll" data-target="#bsSidebar"';
+    }
+    return new Handlebars.SafeString(scroll);
+  };
+
   helpers.isHref = function (a, options) {
     var setId = '';
     if (a) {

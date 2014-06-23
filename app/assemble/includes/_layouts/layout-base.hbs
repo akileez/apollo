@@ -4,11 +4,23 @@
 <head>
   {{> _head }}
 </head>
-<body{{#is scrollspy}} data-spy="scroll" data-target="#bsSidebar"{{/is}}>
+<body{{isScrollspy scrollspy}}>
   {{> _header }}
-  {{> body}}
+  {{#if stickyFooter}}<div id="wrap">{{/if}}
+    <main{{isId idLayout}}{{isClass classLayout}}>
+    {{#if containerLayout}}
+      <div class="{{containerLayout}}">
+      {{> body}}
+      </div>
+    {{else}}
+      {{> body}}
+    {{/if}}
+    </main>
+  {{#if stickFooter}}
+    </div>
+    {{div id="push"}}
+  {{/if}}
   {{> _footer }}
-  {{> _foot }}
 </body>
 </html>
 {{/prettify}}
