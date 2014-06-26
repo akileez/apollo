@@ -7,9 +7,9 @@
 <body{{isScrollspy scrollspy}}>
   {{> _header }}
   {{#if stickyFooter}}<div id="wrap">{{/if}}
-    <main{{isId idLayout}}{{isClass classLayout}}>
-    {{#if containerLayout}}
-      <div class="{{containerLayout}}">
+    <main{{isId layoutID}}{{isClass layoutClass}}>
+    {{#if layoutContainter}}
+      <div class="{{layoutContainter}}">
       {{> body}}
       </div>
     {{else}}
