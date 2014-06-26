@@ -2,6 +2,20 @@
 layout: layout-core
 ---
 {{include 'breadcrumb'}}
-{{> body }}
+{{h3 "About"}}
+{{#p}}This styleguide has been planned to be used with {{a 'Assemble' class="link" href="http://assemble.io/"}} crafted {{a 'Twitter Bootstrap' class="link" href="http://twbs.github.io/bootstrap/"}} code.{{/p}}
+
+{{! http://brettjankord.com/projects/style-guide-boilerplate/ }}
+{{!-- --}}
+{{#row}}
+  {{#column 'sm-3'}}
+    {{#sidenav}}
+      {{composite module.sg-sidenav}}
+    {{/sidenav}}
+  {{/column}}
+  {{#column 'sm-9'}}
+    {{> body }}
+  {{/column}}
+{{/row}}
 
 
