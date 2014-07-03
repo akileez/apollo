@@ -113,7 +113,7 @@ module.exports =
   deploystage:
     options:
       stdout: true
-    command: 'rsync <%= dir.dist %> <%= opt.rsync.stage.host %>:<%= opt.rsync.stage.dest %>
+    command: 'rsync <%= dir.dist %> <%= dir.rsync.stage.host %>:<%= dir.rsync.stage.dest %>
               --rsh ssh
               --recursive
               --delete
@@ -123,7 +123,7 @@ module.exports =
   deploydist:
     options:
       stdout: true
-    command: 'rsync <%= dir.dist %> <%= opt.rsync.dist.host %>:<%= opt.rsync.dist.dest %>
+    command: 'rsync <%= dir.dist %> <%= dir.rsync.dist.host %>:<%= dir.rsync.dist.dest %>
               --rsh ssh
               --recursive
               --delete
@@ -133,7 +133,7 @@ module.exports =
   deploylocal:
     options:
       stdout: true
-    command: 'rsync <%= dir.dist %> <%= opt.rsync.local.dest %>
+    command: 'rsync <%= dir.dist %> <%= dir.rsync.local.dest %>
               --recursive
               --delete
               --verbose

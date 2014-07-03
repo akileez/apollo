@@ -33,7 +33,7 @@ module.exports =
       collections:
         bootstrapJS: ['js']
     files:
-      '<%= dir.tmp %>/convert/json/jsBootstrap.json': ['<%= set.bootstrapJS.src %>']
+      '<%= dir.tmp %>/convert/json/jsBootstrap.json': ['<%= dir.bootstrapJS.src %>']
 
   bs:
     options:
@@ -42,4 +42,4 @@ module.exports =
       collections:
         bootstrapCSS: ['css']
     files:
-      '<%= dir.tmp %>/convert/json/cssBoot.json': ['<%= set.bootstrapCSS.src %>']
+      '<%= dir.tmp %>/convert/json/cssBoot.json': ['<%= dir.bootstrapCSS.src %>']

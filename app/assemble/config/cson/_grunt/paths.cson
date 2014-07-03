@@ -68,4 +68,52 @@
   # Misc
   readme     : '<%= dir.tmp %>/readme'
 
+  # Core Bootstrap files setup for production process. Use this section for configuration
+
+  bootstrapJS:
+    src: [
+      "<%= dir.jsboot %>/transition.js"
+      "<%= dir.jsboot %>/alert.js"
+      "<%= dir.jsboot %>/button.js"
+      "<%= dir.jsboot %>/carousel.js"
+      "<%= dir.jsboot %>/collapse.js"
+      "<%= dir.jsboot %>/dropdown.js"
+      "<%= dir.jsboot %>/modal.js"
+      "<%= dir.jsboot %>/tooltip.js"
+      "<%= dir.jsboot %>/popover.js"
+      "<%= dir.jsboot %>/scrollspy.js"
+      "<%= dir.jsboot %>/tab.js"
+      "<%= dir.jsboot %>/affix.js"
+    ]
+  bootstrapCSS:
+    src: [
+      "<%= dir.css %>/_bs-core.css"
+      "<%= dir.css %>/_bs-common.css"
+      "<%= dir.css %>/_bs-misc.css"
+      "<%= dir.css %>/_bs-nav.css"
+      "<%= dir.css %>/_bs-zindex.css"
+      "<%= dir.css %>/_bs-utils.css"
+    ]
+
+  # Grunt options. Settings for my custom environment. YMMV. Set accordingly.
+  rsync:
+    stage:
+      dest: '/Users/keeda/Sites/http/root.dev'
+      host: 'keeda@odysseus'
+
+    dist:
+      dest: '/Volumes/BigStor/Users/keeda/Sites/http/root.dev'
+      host: 'keeda@agamemnon'
+
+    local:
+      dest: '/Volumes/BigStor/Users/keeda/Sites/http/root.dev'
+
+  open:
+    test:
+      path: 'http://agamemnon.local'
+    stage:
+      path: 'http://odysseus.local'
+    local:
+      path: 'http://kronos.local'
+
 }

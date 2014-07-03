@@ -25,8 +25,6 @@ module.exports = (grunt) ->
   config =
     pkg  : grunt.file.readJSON('package.json')
     dir  : grunt.file.readJSON('grunt/config/paths.json')
-    opt  : grunt.file.readJSON('grunt/config/options.json')
-    set  : grunt.file.readJSON('grunt/config/settings.json')
     env  : process.env
 
   loadConfig = (path) ->

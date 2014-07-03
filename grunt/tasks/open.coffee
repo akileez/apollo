@@ -4,8 +4,8 @@ module.exports =
   dist:
     path: "http://localhost:<%= connect.dist.options.port %>"
   test:
-    path: "<%= opt.open.test.path %>"
+    path: "<%= dir.open.test.path %>"
   stage:
-    path: "<%= opt.open.stage.path %>"
+    path: "<%= dir.open.stage.path %>"
   local:
-    path: "<%= opt.open.local.path %>"
+    path: "<%= dir.open.local.path %>"
